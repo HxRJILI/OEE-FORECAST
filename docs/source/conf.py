@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'OEE-Forecasting'
+project = 'OEE-FORECAST'
 copyright = '2025, RJILI HOUSSAM, WIAME EL HAFID'
 author = 'RJILI HOUSSAM, WIAME EL HAFID'
 release = '1.0.0'
@@ -21,7 +21,7 @@ extensions = [
     'sphinx.ext.napoleon',       # Support for NumPy and Google style docstrings
     'sphinx.ext.mathjax',        # For math equations
     'recommonmark',              # Support for markdown files
-    'nbsphinx',                  # Support for Jupyter notebooks (install with pip if needed)
+    'nbsphinx',                  # Support for Jupyter notebooks
 ]
 
 # Support for markdown files
@@ -37,20 +37,19 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 # Change to the Read the Docs theme
-html_theme = 'sphinx_rtd_theme'  # This is the Read the Docs theme
+html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
-# Theme options
+# Theme options - REMOVED the display_version option
 html_theme_options = {
     'navigation_depth': 4,
     'collapse_navigation': False,
     'sticky_navigation': True,
-    'display_version': True,
     'logo_only': False,
 }
 
 # -- Options for autodoc extension ------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration
+# https://www.sphinx-doc.org/en/master/usage/extension/autodoc.html#configuration
 
 # Sort members by type
 autodoc_member_order = 'groupwise'

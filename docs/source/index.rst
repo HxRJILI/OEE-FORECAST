@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 Welcome to OEE-Forecasting's documentation!
-=======================================
+================================================
 
 This documentation provides a comprehensive guide to the OEE-Forecasting project, which analyzes and forecasts daily Overall Operations Effectiveness (OOE) for Mitsui Morocco's production line. We've leveraged statistical models and deep learning techniques to predict OOE, aiming to enhance decision-making and improve operational efficiency.
 
@@ -15,9 +15,9 @@ This documentation provides a comprehensive guide to the OEE-Forecasting project
    overview
    installation
    data_overview
-   notebooks/notebook1
-   notebooks/notebook2
-   notebooks/notebook3
+   Notebooks/notebook1
+   Notebooks/notebook2
+   Notebooks/notebook3
    models/statistical
    models/deep_learning
    model_comparison

@@ -14,8 +14,8 @@ This guide walks through the process of setting up your environment for the OEE-
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/OEE-Forecasting.git
-cd OEE-Forecasting
+git clone https://github.com/HxRJILI/OEE-FORECAST.git
+cd OEE-FORECAST
 ```
 
 ### 2. Create a Virtual Environment (Recommended)
@@ -94,16 +94,17 @@ Note: The order in the requirements file is important, so if you encounter issue
 
 Here's a list of the exact versions used in the development of this project:
 
-| Package | Version |
-|---------|---------|
-| numpy | 1.24.3 |
-| Cython | 0.29.36 |
-| pmdarima | 2.0.3 |
-| pandas | latest |
-| matplotlib | latest |
-| scikit-learn | latest |
-| tensorflow | latest |
-| statsmodels | latest |
+| Package        | Version |
+|----------------|---------|
+| numpy          | 1.24.3  |
+| Cython         | 0.29.36 |
+| pmdarima       | 2.0.3   |
+| pandas         | latest  |
+| matplotlib     | latest  |
+| scikit-learn   | latest  |
+| tensorflow     | latest  |
+| statsmodels    | latest  |
+
 
 ## Jupyter Notebook Setup
 

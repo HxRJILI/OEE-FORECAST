@@ -106,6 +106,7 @@ Here's a list of the exact versions used in the development of this project:
 | statsmodels    | latest  |
 
 
+
 ## Jupyter Notebook Setup
 
 This project uses Jupyter Notebooks extensively. To install and run Jupyter:

@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notebook 1: Data Processing &amp; EDA &mdash; OEE-Forecasting 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            OEE-Forecasting
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#setup-instructions">Setup Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#clone-the-repository">1. Clone the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#create-a-virtual-environment-recommended">2. Create a Virtual Environment (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#install-dependencies-in-the-correct-order">3. Install Dependencies in the Correct Order</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#step-1-install-numpy-first">Step 1: Install NumPy first</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#step-2-install-cython">Step 2: Install Cython</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#step-3-install-pmdarima">Step 3: Install pmdarima</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation.html#step-4-install-the-remaining-dependencies">Step 4: Install the remaining dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#full-requirements-list">4. Full Requirements List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#package-versions">Package Versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#jupyter-notebook-setup">Jupyter Notebook Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#troubleshooting-common-installation-issues">Troubleshooting Common Installation Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#tensorflow-installation-issues">TensorFlow Installation Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#pmdarima-installation-errors">pmdarima Installation Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#memory-issues-with-large-datasets">Memory Issues with Large Datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#verifying-your-installation">Verifying Your Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_overview.html">Data Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#dataset-sources">Dataset Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#data-structure">Data Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data_overview.html#production-line-dataset">Production Line Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data_overview.html#operational-data">Operational Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#ooe-calculation">OOE Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#data-preprocessing">Data Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#final-dataset-structure">Final Dataset Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#dataset-statistics">Dataset Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#data-access">Data Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_overview.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">OEE-Forecasting</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Notebook 1: Data Processing &amp; EDA</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Notebooks/notebook1.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="notebook-1-data-processing-eda">
+<h1>Notebook 1: Data Processing &amp; EDA<a class="headerlink" href="#notebook-1-data-processing-eda" title="Link to this heading"></a></h1>
+<p>This document explains the first notebook in the OEE-Forecasting project: <code class="docutils literal notranslate"><span class="pre">OEE-Insight_1.ipynb</span></code>. This notebook focuses on data processing, exploratory data analysis, and the calculation of OOE metrics.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The purpose of this notebook is to:</p>
+<ol class="simple">
+<li><p>Load and clean the raw production and operational datasets</p></li>
+<li><p>Perform exploratory data analysis to understand patterns and relationships</p></li>
+<li><p>Calculate the OOE (Overall Operations Effectiveness) metrics</p></li>
+<li><p>Create and export the processed OOE dataset for forecasting</p></li>
+</ol>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Before running this notebook, ensure you have:</p>
+<ul class="simple">
+<li><p>Installed all required dependencies (see <a class="reference external" href="../installation.html">Installation Guide</a>)</p></li>
+<li><p>Placed the raw data files in the <code class="docutils literal notranslate"><span class="pre">data/raw/</span></code> directory (or can use the synthetic data generator)</p></li>
+</ul>
+</section>
+<section id="key-sections">
+<h2>Key Sections<a class="headerlink" href="#key-sections" title="Link to this heading"></a></h2>
+<section id="data-loading">
+<h3>1. Data Loading<a class="headerlink" href="#data-loading" title="Link to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">glob</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># Load production data</span>
+<span class="n">production_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/raw/production_data.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">])</span>
+
+<span class="c1"># Load operational data</span>
+<span class="n">operational_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/raw/operational_data.csv&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">])</span>
+
+<span class="c1"># Display basic information</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Production data shape: </span><span class="si">{</span><span class="n">production_data</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Operational data shape: </span><span class="si">{</span><span class="n">operational_data</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This section loads the raw datasets and displays their basic information.</p>
+</section>
+<section id="data-cleaning">
+<h3>2. Data Cleaning<a class="headerlink" href="#data-cleaning" title="Link to this heading"></a></h3>
+<p>The notebook performs several data cleaning steps:</p>
+<ul class="simple">
+<li><p>Handling missing values using appropriate methods (imputation, removal)</p></li>
+<li><p>Removing outliers using statistical methods</p></li>
+<li><p>Correcting data types and formats</p></li>
+<li><p>Merging datasets based on common keys</p></li>
+</ul>
+<p>Key code example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check for missing values</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="n">production_data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missing values in production data:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">missing_values</span><span class="p">)</span>
+
+<span class="c1"># Handle missing values</span>
+<span class="n">production_data</span> <span class="o">=</span> <span class="n">production_data</span><span class="o">.</span><span class="n">fillna</span><span class="p">({</span>
+    <span class="s1">&#39;Planned Production Time&#39;</span><span class="p">:</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Planned Production Time&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+    <span class="s1">&#39;Units Produced&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;Good Units&#39;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">})</span>
+
+<span class="c1"># Check for outliers using IQR method</span>
+<span class="n">Q1</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Units Produced&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="n">Q3</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Units Produced&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="n">IQR</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">-</span> <span class="n">Q1</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">Q1</span> <span class="o">-</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">Q3</span> <span class="o">+</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">IQR</span>
+
+<span class="n">outliers</span> <span class="o">=</span> <span class="p">((</span><span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Units Produced&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">lower_bound</span><span class="p">)</span> <span class="o">|</span> 
+            <span class="p">(</span><span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Units Produced&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_bound</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of outliers in Units Produced: </span><span class="si">{</span><span class="n">outliers</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="exploratory-data-analysis">
+<h3>3. Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Link to this heading"></a></h3>
+<p>This section includes various visualizations and statistical analyses to understand the data better:</p>
+<ul class="simple">
+<li><p>Time series plots of production metrics</p></li>
+<li><p>Correlation analysis between different variables</p></li>
+<li><p>Distribution of key performance indicators</p></li>
+<li><p>Seasonal patterns and trends</p></li>
+</ul>
+<p>Example visualization:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+
+<span class="c1"># Set up the figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="c1"># Plot production over time</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">],</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Units Produced&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Units Produced Over Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Units&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Correlation heatmap</span>
+<span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">production_data</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">])</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Correlation Matrix of Production Metrics&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="ooe-calculation">
+<h3>4. OOE Calculation<a class="headerlink" href="#ooe-calculation" title="Link to this heading"></a></h3>
+<p>This section calculates the three components of OOE and the final OOE metric:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate Availability</span>
+<span class="n">availability</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Actual Production Time&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Planned Production Time&#39;</span><span class="p">]</span>
+
+<span class="c1"># Calculate Performance</span>
+<span class="n">performance</span> <span class="o">=</span> <span class="p">((</span><span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Units Produced&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Actual Production Time&#39;</span><span class="p">])</span> <span class="o">/</span> 
+               <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Standard Units per Hour&#39;</span><span class="p">])</span>
+
+<span class="c1"># Calculate Quality</span>
+<span class="n">quality</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Good Units&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Units Produced&#39;</span><span class="p">]</span>
+<span class="n">quality</span> <span class="o">=</span> <span class="n">quality</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Handle division by zero</span>
+
+<span class="c1"># Calculate OOE</span>
+<span class="n">ooe</span> <span class="o">=</span> <span class="n">availability</span> <span class="o">*</span> <span class="n">performance</span> <span class="o">*</span> <span class="n">quality</span>
+
+<span class="c1"># Add to dataframe</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Availability&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">availability</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Performance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">performance</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Quality&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">quality</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;OOE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ooe</span>
+</pre></div>
+</div>
+</section>
+<section id="feature-engineering">
+<h3>5. Feature Engineering<a class="headerlink" href="#feature-engineering" title="Link to this heading"></a></h3>
+<p>Additional features are created to enhance the forecasting models:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add time-based features</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;DayOfWeek&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">dayofweek</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Quarter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">production_data</span><span class="p">[</span><span class="s1">&#39;Timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">quarter</span>
+
+<span class="c1"># Aggregate to daily level</span>
+<span class="n">daily_ooe</span> <span class="o">=</span> <span class="n">production_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span>
+    <span class="s1">&#39;OOE&#39;</span><span class="p">:</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Availability&#39;</span><span class="p">:</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Performance&#39;</span><span class="p">:</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Quality&#39;</span><span class="p">:</span> <span class="s1">&#39;mean&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;DayOfWeek&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Month&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Quarter&#39;</span><span class="p">:</span> <span class="s1">&#39;first&#39;</span>
+<span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="c1"># Create lag features</span>
+<span class="k">for</span> <span class="n">lag</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">]:</span>
+    <span class="n">daily_ooe</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;OOE_lag</span><span class="si">{</span><span class="n">lag</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">daily_ooe</span><span class="p">[</span><span class="s1">&#39;OOE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">lag</span><span class="p">)</span>
+
+<span class="c1"># Create rolling statistics</span>
+<span class="n">daily_ooe</span><span class="p">[</span><span class="s1">&#39;OOE_rolling_mean_7&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">daily_ooe</span><span class="p">[</span><span class="s1">&#39;OOE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">daily_ooe</span><span class="p">[</span><span class="s1">&#39;OOE_rolling_std_7&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">daily_ooe</span><span class="p">[</span><span class="s1">&#39;OOE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="data-export">
+<h3>6. Data Export<a class="headerlink" href="#data-export" title="Link to this heading"></a></h3>
+<p>The final processed dataset is exported for use in subsequent notebooks:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Drop rows with NaN values created by lags</span>
+<span class="n">daily_ooe</span> <span class="o">=</span> <span class="n">daily_ooe</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1"># Export to CSV</span>
+<span class="n">daily_ooe</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/processed/daily_ooe.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exported processed OOE dataset with </span><span class="si">{</span><span class="n">daily_ooe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> records.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="results-and-insights">
+<h2>Results and Insights<a class="headerlink" href="#results-and-insights" title="Link to this heading"></a></h2>
+<p>Key findings from the exploratory data analysis:</p>
+<ul class="simple">
+<li><p>Average OOE across the entire dataset is X%</p></li>
+<li><p>Identified a weekly seasonality pattern with lower OOE on weekends</p></li>
+<li><p>The Quality component is generally high (&gt;95%), while Availability shows the most variation</p></li>
+<li><p>Strong correlation observed between maintenance events and drops in Availability</p></li>
+<li><p>Gradual improvement trend in overall OOE over the analyzed period</p></li>
+</ul>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>After running this notebook, you will have a processed OOE dataset (<code class="docutils literal notranslate"><span class="pre">daily_ooe.csv</span></code>) that is ready for forecasting. Proceed to <a class="reference external" href="notebook2.html">Notebook 2</a> to apply statistical forecasting models to this dataset.</p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p>Common issues that might occur in this notebook:</p>
+<ul class="simple">
+<li><p><strong>File not found errors</strong>: Ensure the raw data files are in the correct directory</p></li>
+<li><p><strong>Memory errors</strong>: For very large datasets, consider sampling or chunking</p></li>
+<li><p><strong>Division by zero warnings</strong>: These are handled in the OOE calculation section</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RJILI HOUSSAM, WIAME EL HAFID.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Overview &mdash; OEE-Forecasting 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Installation Guide" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            OEE-Forecasting
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#setup-instructions">Setup Instructions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#clone-the-repository">1. Clone the Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#create-a-virtual-environment-recommended">2. Create a Virtual Environment (Recommended)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#install-dependencies-in-the-correct-order">3. Install Dependencies in the Correct Order</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-numpy-first">Step 1: Install NumPy first</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-cython">Step 2: Install Cython</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-install-pmdarima">Step 3: Install pmdarima</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-install-the-remaining-dependencies">Step 4: Install the remaining dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#full-requirements-list">4. Full Requirements List</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#package-versions">Package Versions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#jupyter-notebook-setup">Jupyter Notebook Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#troubleshooting-common-installation-issues">Troubleshooting Common Installation Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#tensorflow-installation-issues">TensorFlow Installation Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#pmdarima-installation-errors">pmdarima Installation Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#memory-issues-with-large-datasets">Memory Issues with Large Datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#verifying-your-installation">Verifying Your Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#next-steps">Next Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-sources">Dataset Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-structure">Data Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#production-line-dataset">Production Line Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operational-data">Operational Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ooe-calculation">OOE Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-preprocessing">Data Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-dataset-structure">Final Dataset Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-statistics">Dataset Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-access">Data Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OEE-Forecasting</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/data_overview.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-overview">
+<h1>Data Overview<a class="headerlink" href="#data-overview" title="Link to this heading"></a></h1>
+<p>This section provides detailed information about the datasets used in the OEE-Forecasting project for Mitsui Morocco’s production line.</p>
+<section id="dataset-sources">
+<h2>Dataset Sources<a class="headerlink" href="#dataset-sources" title="Link to this heading"></a></h2>
+<p>The project uses two primary datasets:</p>
+<ol class="simple">
+<li><p><strong>Production Line Data</strong>: Contains metrics related to manufacturing operations</p></li>
+<li><p><strong>Operational Data</strong>: Contains details about machine performance and downtime</p></li>
+</ol>
+<p>These datasets are processed in Notebook 1 (OEE-Insight_1) to calculate the Overall Operations Effectiveness (OOE) metrics.</p>
+</section>
+<section id="data-structure">
+<h2>Data Structure<a class="headerlink" href="#data-structure" title="Link to this heading"></a></h2>
+<section id="production-line-dataset">
+<h3>Production Line Dataset<a class="headerlink" href="#production-line-dataset" title="Link to this heading"></a></h3>
+<p>The production line dataset includes the following key fields:</p>
+<p>| Field | Description | Data Type |
+|——-|————-|———–|
+| Timestamp | Date and time of the record | datetime |
+| Line ID | Identifier for the production line | string |
+| Planned Production Time | Scheduled runtime in minutes | float |
+| Actual Production Time | Actual runtime in minutes | float |
+| Units Produced | Number of units manufactured | integer |
+| Good Units | Number of units passing quality control | integer |
+| Standard Units per Hour | Expected production rate | float |</p>
+</section>
+<section id="operational-data">
+<h3>Operational Data<a class="headerlink" href="#operational-data" title="Link to this heading"></a></h3>
+<p>The operational dataset contains:</p>
+<p>| Field | Description | Data Type |
+|——-|————-|———–|
+| Timestamp | Date and time of the record | datetime |
+| Machine ID | Identifier for the specific machine | string |
+| Status Code | Operating status code | integer |
+| Downtime Reason | Explanation for machine stoppage | string |
+| Maintenance Type | Type of maintenance if applicable | string |
+| Temperature | Operating temperature | float |
+| Vibration | Vibration measurements | float |</p>
+</section>
+</section>
+<section id="ooe-calculation">
+<h2>OOE Calculation<a class="headerlink" href="#ooe-calculation" title="Link to this heading"></a></h2>
+<p>The OOE (Overall Operations Effectiveness) is calculated using three components:</p>
+<ol>
+<li><p><strong>Availability</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Availability</span> <span class="o">=</span> <span class="n">Actual</span> <span class="n">Production</span> <span class="n">Time</span> <span class="o">/</span> <span class="n">Planned</span> <span class="n">Production</span> <span class="n">Time</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Performance</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Performance</span> <span class="o">=</span> <span class="p">(</span><span class="n">Units</span> <span class="n">Produced</span> <span class="o">/</span> <span class="n">Actual</span> <span class="n">Production</span> <span class="n">Time</span><span class="p">)</span> <span class="o">/</span> <span class="n">Standard</span> <span class="n">Units</span> <span class="n">per</span> <span class="n">Hour</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Quality</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Quality</span> <span class="o">=</span> <span class="n">Good</span> <span class="n">Units</span> <span class="o">/</span> <span class="n">Units</span> <span class="n">Produced</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>OOE</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>OOE = Availability × Performance × Quality
+</pre></div>
+</div>
+</li>
+</ol>
+<p>The calculated OOE data is saved as a time series dataset for forecasting in subsequent notebooks.</p>
+</section>
+<section id="data-preprocessing">
+<h2>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Link to this heading"></a></h2>
+<p>The raw datasets undergo several preprocessing steps in Notebook 1:</p>
+<ol class="simple">
+<li><p><strong>Data Cleaning</strong>:</p>
+<ul class="simple">
+<li><p>Handling missing values</p></li>
+<li><p>Removing outliers and anomalies</p></li>
+<li><p>Standardizing date/time formats</p></li>
+</ul>
+</li>
+<li><p><strong>Feature Engineering</strong>:</p>
+<ul class="simple">
+<li><p>Calculating the OOE components (Availability, Performance, Quality)</p></li>
+<li><p>Creating additional time-based features (day of week, month, etc.)</p></li>
+<li><p>Deriving statistical features (rolling means, variances, etc.)</p></li>
+</ul>
+</li>
+<li><p><strong>Data Transformation</strong>:</p>
+<ul class="simple">
+<li><p>Aggregating data to daily intervals</p></li>
+<li><p>Normalization/scaling for deep learning models</p></li>
+<li><p>Creating lag features for time series models</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="final-dataset-structure">
+<h2>Final Dataset Structure<a class="headerlink" href="#final-dataset-structure" title="Link to this heading"></a></h2>
+<p>After preprocessing, the resulting OOE dataset used for forecasting has the following structure:</p>
+<p>| Column | Description | Data Type |
+|——–|————-|———–|
+| Date | Date of the record | date |
+| OOE | Overall Operations Effectiveness | float |
+| Availability | Availability component | float |
+| Performance | Performance component | float |
+| Quality | Quality component | float |
+| DayOfWeek | Day of the week (0-6) | integer |
+| Month | Month (1-12) | integer |
+| IsHoliday | Holiday flag (0/1) | boolean |
+| MaintenanceDay | Scheduled maintenance flag (0/1) | boolean |
+| OOE_lag1 | OOE value from previous day | float |
+| OOE_lag2 | OOE value from 2 days ago | float |
+| OOE_lag7 | OOE value from 7 days ago | float |
+| OOE_rolling_mean_7 | 7-day rolling average of OOE | float |</p>
+</section>
+<section id="dataset-statistics">
+<h2>Dataset Statistics<a class="headerlink" href="#dataset-statistics" title="Link to this heading"></a></h2>
+<p>Key statistics for the final OOE dataset:</p>
+<ul class="simple">
+<li><p><strong>Time Period</strong>: Approximately 2 years of daily data</p></li>
+<li><p><strong>Number of Records</strong>: ~730 daily records</p></li>
+<li><p><strong>Average OOE</strong>: Typically ranges from 0.65 to 0.85</p></li>
+<li><p><strong>Seasonality</strong>: Weekly patterns observed, with lower OOE on weekends</p></li>
+<li><p><strong>Trend</strong>: Gradual improvement in OOE over time due to operational enhancements</p></li>
+</ul>
+</section>
+<section id="data-access">
+<h2>Data Access<a class="headerlink" href="#data-access" title="Link to this heading"></a></h2>
+<p>The raw datasets are not provided in the repository due to confidentiality reasons. However, Notebook 1 includes code for generating synthetic datasets with similar statistical properties for testing and development purposes.</p>
+<p>Users with access to the actual production data should place the CSV files in the <code class="docutils literal notranslate"><span class="pre">data/raw/</span></code> directory before running the notebooks.</p>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>After understanding the data structure, proceed to <a class="reference external" href="notebooks/notebook1.html">Notebook 1</a> to see how the data is processed and transformed into the OOE dataset used for forecasting.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, RJILI HOUSSAM, WIAME EL HAFID.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -3,7 +3,7 @@ Production Deployment Guide
 
 This comprehensive guide covers deploying the OEE Forecasting and Analytics system in production environments, including scalability considerations, security measures, monitoring setup, and best practices for enterprise deployment.
 
-🚀 **Deployment Architecture Overview**
+ **Deployment Architecture Overview**
 ======================================
 
 **Production Deployment Architecture:**
@@ -84,7 +84,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
       ├── Scaling: Elastic scaling
       └── Complexity: Medium-High
 
-🐳 **Containerized Deployment**
+ **Containerized Deployment**
 ==============================
 
 **Docker Configuration**
@@ -303,7 +303,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
        targetPort: 8501
      type: LoadBalancer
 
-🔧 **Infrastructure Configuration**
+ **Infrastructure Configuration**
 ==================================
 
 **Load Balancer Configuration (Nginx)**
@@ -435,7 +435,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
    GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO oee_user;
    GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO oee_user;
 
-🔒 **Security Configuration**
+ **Security Configuration**
 ============================
 
 **Environment Variables and Secrets Management**
@@ -553,7 +553,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
            return wrapper
        return decorator
 
-📊 **Monitoring and Observability**
+ **Monitoring and Observability**
 ===================================
 
 **Application Monitoring Setup**
@@ -791,7 +791,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
      }
    }
 
-🔄 **CI/CD Pipeline**
+ **CI/CD Pipeline**
 ====================
 
 **GitHub Actions Workflow**
@@ -914,7 +914,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
    
    echo "Backup completed successfully"
 
-📈 **Scaling and Performance**
+ **Scaling and Performance**
 =============================
 
 **Auto-scaling Configuration**
@@ -1017,7 +1017,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
            except Exception:
                pass  # Fail silently for caching errors
 
-🛠️ **Deployment Scripts**
+ **Deployment Scripts**
 =========================
 
 **One-Click Deployment Script**
@@ -1112,7 +1112,7 @@ This comprehensive guide covers deploying the OEE Forecasting and Analytics syst
    
    echo "🎉 Maintenance completed successfully!"
 
-📚 **Best Practices Summary**
+ **Best Practices Summary**
 ============================
 
 **Security Best Practices:**

@@ -3,7 +3,7 @@ RAG System Implementation
 
 This section provides in-depth technical documentation for the Retrieval-Augmented Generation (RAG) system that powers the OEE Advisory functionality. The RAG system combines advanced natural language processing with manufacturing domain knowledge to provide intelligent recommendations.
 
-🧠 **RAG Architecture Overview**
+ **RAG Architecture Overview**
 ===============================
 
 **System Components:**
@@ -89,7 +89,7 @@ This section provides in-depth technical documentation for the Retrieval-Augment
       ├── Safety & Quality Validation
       └── Source Attribution
 
-🔧 **Core RAG Components**
+ **Core RAG Components**
 =========================
 
 **Document Processing Pipeline**
@@ -455,7 +455,7 @@ This section provides in-depth technical documentation for the Retrieval-Augment
       :returns: Hybrid search results with relevance scores
       :rtype: list
 
-🔍 **Advanced Retrieval Strategies**
+ **Advanced Retrieval Strategies**
 ===================================
 
 **Multi-Stage Retrieval Pipeline**
@@ -562,7 +562,7 @@ This section provides in-depth technical documentation for the Retrieval-Augment
               'expansion_applied': True
           }
 
-📊 **Performance Optimization**
+ **Performance Optimization**
 ==============================
 
 **Caching and Memory Management**
@@ -646,7 +646,7 @@ This section provides in-depth technical documentation for the Retrieval-Augment
           else:
               return process_documents_sequential(documents, batch_size)
 
-🔧 **Quality Assurance and Validation**
+ **Quality Assurance and Validation**
 ======================================
 
 **Response Quality Assessment**
@@ -774,7 +774,7 @@ This section provides in-depth technical documentation for the Retrieval-Augment
               'mitigation_suggestions': generate_mitigation_suggestions(detection_results)
           }
 
-🔄 **Continuous Learning and Improvement**
+ **Continuous Learning and Improvement**
 ==========================================
 
 **Feedback Integration**
@@ -838,7 +838,7 @@ This section provides in-depth technical documentation for the Retrieval-Augment
              
              return improvements
 
-🚀 **Production Deployment Considerations**
+ **Production Deployment Considerations**
 ==========================================
 
 **Scalability and Performance**
@@ -929,7 +929,7 @@ This section provides in-depth technical documentation for the Retrieval-Augment
          ├── Knowledge Base Coverage
          └── Improvement Impact
 
-📚 **Usage Examples and Best Practices**
+ **Usage Examples and Best Practices**
 =======================================
 
 **Complete RAG System Setup**

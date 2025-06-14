@@ -1,260 +1,453 @@
-# OOE-Forecasting Documentation
+# 🏭 OEE Manufacturing Analytics & AI Advisory System
 
-## Overview
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10+-orange.svg)](https://tensorflow.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-This documentation guides you through the OOE-Forecasting project for Mitsui Morocco's production line. The project analyzes and forecasts daily Overall Operations Effectiveness (OOE) using statistical models and deep learning techniques to enhance decision-making and improve operational efficiency.
+A comprehensive **Overall Equipment Effectiveness (OEE)** analysis platform that combines traditional manufacturing metrics with cutting-edge AI capabilities. This system provides real-time OEE monitoring, advanced forecasting, and an AI-powered advisory system for manufacturing optimization.
 
-## Table of Contents
+## 🌟 Key Features
 
-1. [Project Setup](#project-setup)
-2. [Data Overview](#data-overview)
-3. [Notebook 1: OEE-Insight_1 - Data Processing & EDA](#notebook-1-oee-insight_1---data-processing--eda)
-4. [Notebook 2: OEE-Insight_2 - Statistical Forecasting](#notebook-2-oee-insight_2---statistical-forecasting)
-5. [Notebook 3: OEE-Insight_3 - Deep Learning Models](#notebook-3-oee-insight_3---deep-learning-models)
-6. [Model Comparison & Results](#model-comparison--results)
-7. [Troubleshooting](#troubleshooting)
-8. [References](#references)
+### 📊 **Core Analytics**
+- **Real-time OEE Calculation**: Automatic computation of Availability, Performance, and Quality metrics
+- **Multi-line Analysis**: Compare performance across multiple production lines
+- **Interactive Dashboard**: Beautiful Plotly-based visualizations with drill-down capabilities
+- **Historical Trend Analysis**: Identify patterns and improvement opportunities
 
-## Project Setup
+### 🔮 **Advanced Forecasting**
+- **Deep Learning Models**: RNN, CNN, and WaveNet-style architectures for time series prediction
+- **Statistical Methods**: ARIMA models with automated parameter selection
+- **Walk-Forward Validation**: Realistic performance evaluation using time-aware validation
+- **Multi-step Forecasting**: Predict OEE values up to 30 days ahead
+
+### 🤖 **AI Advisory System (RAG)**
+- **Intelligent Q&A**: Ask questions about OEE optimization in natural language
+- **Document Processing**: Upload PDF manuals and best practices for enhanced knowledge
+- **Contextual Recommendations**: AI-powered suggestions based on your specific OEE data
+- **Knowledge Base**: Built-in manufacturing expertise with expandable document library
+
+### 📈 **Professional Dashboard**
+- **Multiple Views**: Main dashboard, line-specific analysis, overall trends, and forecasting
+- **Real-time Metrics**: Live KPI tracking with performance alerts
+- **Export Capabilities**: Generate reports and export data for further analysis
+- **Mobile Responsive**: Access from any device
+
+## 🏗️ System Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    Streamlit Dashboard                      │
+├─────────────────┬─────────────────┬─────────────────────────┤
+│   OEE Analytics │   Forecasting   │     AI Advisory         │
+│                 │                 │                         │
+│ • Real-time KPIs│ • Deep Learning │ • RAG System           │
+│ • Trend Analysis│ • Statistical   │ • Document Processing  │
+│ • Comparisons   │ • Validation    │ • Gemini API           │
+└─────────────────┴─────────────────┴─────────────────────────┘
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│                     Data Processing Layer                   │
+├─────────────────┬─────────────────┬─────────────────────────┤
+│  Data Ingestion │   OEE Calc     │    ML Pipeline          │
+│                 │                 │                         │
+│ • CSV Processing│ • Availability  │ • Feature Engineering  │
+│ • Data Cleaning │ • Performance   │ • Model Training       │
+│ • Validation    │ • Quality       │ • Hyperparameter Opt.  │
+└─────────────────┴─────────────────┴─────────────────────────┘
+                              │
+┌─────────────────────────────────────────────────────────────┐
+│                        Data Sources                         │
+│  📄 line_status.csv  │  📄 production_data.csv  │  📚 PDFs  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
 - Python 3.8+
-- Required packages:
-  - pandas
-  - numpy
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - pmdarima
-  - tensorflow/keras
-  - statsmodels
+- pip or conda package manager
+- 4GB+ RAM (8GB recommended for deep learning)
 
-### Installation
+### 1. Basic Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/OOE-Forecasting.git
-   cd OOE-Forecasting
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/oee-manufacturing-analytics.git
+cd oee-manufacturing-analytics
 
-2. Create and activate a virtual environment (recommended):
-   ```bash
-   python -m venv ooe-env
-   source ooe-env/bin/activate  # On Windows: ooe-env\Scripts\activate
-   ```
+# Install core dependencies
+pip install -r requirements.txt
 
-3. Install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Run the basic dashboard
+streamlit run app.py
+```
 
-## Data Overview
+### 2. Full Installation (with AI Advisory)
 
-The project utilizes two primary datasets from Mitsui Morocco's production line:
-1. Production data - Contains metrics related to manufacturing operations
-2. Operational data - Contains details about machine performance and downtime
+```bash
+# Run the automated setup script
+python setup_advisory.py
 
-These datasets are processed to calculate the Overall Operations Effectiveness (OOE), which is a key performance indicator for production efficiency.
+# Or install manually:
+pip install -r requirements_rag.txt
+python -m spacy download en_core_web_sm
 
-## Notebook 1: OEE-Insight_1 - Data Processing & EDA
+# Set your Gemini API key (optional - for AI features)
+export GEMINI_API_KEY="your_api_key_here"
 
-This notebook performs initial data exploration and transforms raw production data into OOE metrics.
+# Run with full features
+streamlit run app.py
+```
 
-### Running the Notebook
+### 3. Docker Installation (Coming Soon)
 
-1. Launch Jupyter Notebook or JupyterLab:
-   ```bash
-   jupyter notebook
-   ```
+```bash
+docker pull oee-analytics:latest
+docker run -p 8501:8501 oee-analytics
+```
 
-2. Navigate to and open `OEE-Insight_1.ipynb`.
+## 📁 Project Structure
 
-3. Run all cells sequentially to:
-   - Load and clean the datasets
-   - Perform exploratory data analysis
-   - Calculate OOE metrics
-   - Save processed OOE dataset to your working directory
+```
+oee-manufacturing-analytics/
+├── 📊 Core Application
+│   ├── app.py                          # Main Streamlit dashboard
+│   ├── requirements.txt                # Core dependencies
+│   └── requirements_rag.txt            # AI system dependencies
+│
+├── 🤖 AI Advisory System
+│   ├── advisory_integration.py         # Streamlit integration
+│   ├── rag_system.py                  # RAG implementation
+│   ├── document_processor.py          # PDF processing
+│   └── setup_advisory.py              # Automated setup
+│
+├── 📈 Analysis Notebooks
+│   ├── OEE_Insights_1.ipynb          # Data preprocessing & OEE calculation
+│   ├── OEE_Insights_2.ipynb          # Statistical analysis & ARIMA
+│   └── OEE_Insights_3.ipynb          # Deep learning forecasting
+│
+├── 📄 Data Files
+│   ├── line_status_notcleaned.csv     # Raw production line status
+│   ├── production_data.csv            # Raw production output data
+│   └── The_Complete_Guide_to_Simple_OEE.pdf  # Optional knowledge base
+│
+└── 🔧 Generated Directories (auto-created)
+    ├── processed_documents/            # Processed AI documents
+    ├── vector_db/                     # AI knowledge base
+    ├── models/                        # Saved ML models
+    └── embeddings/                    # AI embeddings cache
+```
 
-### Key Components
+## 📊 Data Format
 
-- **Data Loading**: Import raw production and operational datasets
-- **Data Cleaning**: Handle missing values, outliers, and inconsistencies
-- **Feature Engineering**: Calculate OOE from its components (Availability, Performance, Quality)
-- **Exploratory Analysis**: Visualize trends, patterns, and correlations in production data
-- **Data Export**: Save the calculated OOE dataset for use in subsequent notebooks
+### Input Data Requirements
 
-### Expected Output
+**Line Status Data** (`line_status_notcleaned.csv`):
+```csv
+PRODUCTION_LINE,START_DATETIME,FINISH_DATETIME,STATUS_NAME,SHIFT
+LINE-01,2024-01-01 08:00:00,2024-01-01 09:30:00,Production,1
+LINE-01,2024-01-01 09:30:00,2024-01-01 09:45:00,Break Time,1
+```
 
-After running this notebook, you should have:
-- Visualizations of production data trends
-- Correlation analyses between different operational metrics
-- A processed OOE dataset saved in your working directory
+**Production Data** (`production_data.csv`):
+```csv
+LINE,START_DATETIME,FINISH_DATETIME,PRODUCT_ID
+LINE-01,2024-01-01 08:00:00,2024-01-01 08:11:00,PROD_001
+LINE-01,2024-01-01 08:11:00,2024-01-01 08:22:00,PROD_002
+```
 
-## Notebook 2: OEE-Insight_2 - Statistical Forecasting
+## 🎯 Usage Examples
 
-This notebook applies statistical time series forecasting models to the OOE data.
+### Basic OEE Analysis
+```python
+# Load and analyze your data
+from app import load_processed_data
 
-### Running the Notebook
+daily_oee_data, overall_daily_oee = load_processed_data()
 
-1. Ensure you've successfully run Notebook 1 first.
-2. Open and run `OEE-Insight_2.ipynb`.
+# Calculate average OEE by line
+avg_oee = daily_oee_data.groupby('PRODUCTION_LINE')['OEE'].mean()
+print(f"Average OEE: {avg_oee}")
+```
 
-### Key Components
+### Deep Learning Forecasting
+```python
+# Use the forecasting models
+from app import create_forecast, RobustScaler
 
-- **Data Preparation**: Time series preprocessing (stationarity checks, differencing)
-- **Model Selection**: Automated selection and optimization using pmdarima
-- **Models Implemented**:
-  - Auto ARIMA: Automatically determines optimal ARIMA parameters
-  - SARIMA: Handles seasonality in the OOE data
-  - Exponential Smoothing (ETS): Captures trends and seasonality
+# Prepare your data
+scaler = RobustScaler()
+scaled_data = scaler.fit_transform(oee_data.reshape(-1, 1))
 
-### Statistical Model Parameters
+# Generate 7-day forecast
+forecast = create_forecast(
+    model_builder_func=build_stacked_simplernn_with_masking,
+    data_1d=oee_data,
+    scaler_obj=scaler,
+    look_back=14,
+    forecast_steps=7
+)
+```
 
-Each statistical model is optimized with parameters specific to the OOE time series:
+### AI Advisory Integration
+```python
+# Ask the AI advisor
+from rag_system import create_oee_advisor
 
-- **ARIMA Parameters**:
-  - p: AutoRegressive order
-  - d: Differencing order
-  - q: Moving Average order
-  
-- **SARIMA Additional Parameters**:
-  - P: Seasonal AutoRegressive order
-  - D: Seasonal Differencing order
-  - Q: Seasonal Moving Average order
-  - s: Seasonality period
+advisor = create_oee_advisor("your_gemini_api_key")
+response = advisor.ask_question("How can I improve OEE for LINE-01?")
+print(response["response"])
+```
 
-- **ETS Parameters**:
-  - Alpha: Smoothing parameter for level
-  - Beta: Smoothing parameter for trend
-  - Gamma: Smoothing parameter for seasonality
-  - Trend type: Additive or multiplicative
-  - Seasonal type: Additive or multiplicative
+## 🧪 Model Performance
 
-### Expected Output
+Our deep learning models have been extensively validated using walk-forward time series validation:
 
-After running this notebook, you should have:
-- Time series decomposition plots
-- Model diagnostics (ACF/PACF plots, residual analysis)
-- Forecast plots for each statistical model
-- Performance metrics (MSE, RMSE, R²) for comparison
+| Model | Architecture | Best MAE | Best RMSE | Use Case |
+|-------|-------------|----------|-----------|----------|
+| **Stacked RNN + Masking** | 2-layer SimpleRNN with attention | 0.0591 | 0.0798 | Variable-length sequences |
+| **Multi-Kernel CNN** | Parallel conv1d towers | 0.0591 | 0.0798 | Pattern recognition |
+| **WaveNet-style CNN** | Dilated convolutions | 0.0605 | 0.0814 | Long-range dependencies |
+| **Statistical ARIMA** | Auto-selected parameters | 0.0664 | 0.0882 | Baseline & interpretability |
 
-## Notebook 3: OEE-Insight_3 - Deep Learning Models
+*Results shown for best-performing production line (LINE-06)*
 
-This notebook implements various deep learning architectures to forecast OOE.
+## 🔧 Configuration
 
-### Running the Notebook
+### Environment Variables
+```bash
+# Required for AI Advisory System
+export GEMINI_API_KEY="your_google_gemini_api_key"
 
-1. Ensure you've successfully run Notebook 1 first.
-2. Open and run `OEE-Insight_3.ipynb`.
+# Optional configurations
+export OEE_FORECAST_HORIZON="7"  # Days to forecast ahead
+export OEE_MODEL_CACHE="true"    # Enable model caching
+export OEE_LOG_LEVEL="INFO"      # Logging level
+```
 
-### Key Components
+### Cycle Times Configuration
+Edit `app.py` to set your production line cycle times:
+```python
+CYCLE_TIMES = {
+    'LINE-01': 11.0,  # seconds per unit
+    'LINE-03': 5.5,
+    'LINE-04': 11.0,
+    'LINE-06': 11.0
+}
+```
 
-- **Data Preparation**: Sequence creation, normalization, train-test splitting
-- **Deep Learning Models**:
-  - Recurrent Models: 
-    - LSTM (Long Short-Term Memory)
-    - GRU (Gated Recurrent Unit)
-    - Vanilla RNN
-  - Hybrid Models:
-    - CNN + LSTM
-    - LSTM Autoencoder + Dense layers
-  - Advanced Architectures:
-    - TCN (Temporal Convolutional Network)
-- **Hyperparameter Tuning**: Optimization of model architectures
+## 🤖 AI Advisory System
 
-### Neural Network Architectures
+The RAG (Retrieval-Augmented Generation) system provides intelligent OEE optimization advice:
 
-Details of the implemented neural network structures:
+### Features
+- **Natural Language Q&A**: Ask questions like "Why is my OEE below 60%?"
+- **Document Integration**: Upload maintenance manuals, best practices, troubleshooting guides
+- **Contextual Analysis**: AI considers your specific production data when giving advice
+- **Multi-source Knowledge**: Combines uploaded documents with built-in manufacturing expertise
 
-- **LSTM Model**:
-  ```
-  LSTM Layer(units=64, return_sequences=True)
-  Dropout(0.2)
-  LSTM Layer(units=32)
-  Dense Layer(units=1)
-  ```
+### Supported Document Types
+- PDF manuals and guides
+- Maintenance procedures
+- Quality control documents
+- Best practice guidelines
+- Troubleshooting manuals
 
-- **GRU Model**:
-  ```
-  GRU Layer(units=64, return_sequences=True)
-  Dropout(0.2)
-  GRU Layer(units=32)
-  Dense Layer(units=1)
-  ```
+### Example Queries
+- "What are the main causes of low availability on production lines?"
+- "How do I reduce changeover time for LINE-01?"
+- "What's the industry benchmark for OEE in automotive manufacturing?"
+- "Analyze the performance data for LINE-03 and suggest improvements"
 
-- **CNN+LSTM Model**:
-  ```
-  Conv1D Layer(filters=64, kernel_size=2)
-  MaxPooling1D(pool_size=2)
-  LSTM Layer(units=50)
-  Dense Layer(units=1)
-  ```
+## 📚 Technical Deep Dive
 
-- **TCN Model**:
-  ```
-  TCN Layer(nb_filters=64, kernel_size=2, dilations=[1, 2, 4, 8])
-  Dense Layer(units=1)
-  ```
+### OEE Calculation
+```
+OEE = Availability × Performance × Quality
 
-### Expected Output
+Where:
+• Availability = Actual Run Time / Planned Production Time
+• Performance = (Total Output × Ideal Cycle Time) / Actual Run Time  
+• Quality = Good Output / Total Output
+```
 
-After running this notebook, you should have:
-- Training and validation loss curves
-- Forecast plots for each deep learning model
-- Performance metrics (MSE, RMSE, R²) for comparison
+### Forecasting Models
 
-## Model Comparison & Results
+**1. Stacked SimpleRNN with Masking**
+- Handles variable-length sequences with missing data
+- 2-layer architecture with dropout regularization
+- Multi-step prediction with 3-day horizon
+- Input: 14-day lookback, padded to 20 timesteps
 
-The project compares various forecasting approaches:
+**2. Multi-Kernel CNN**
+- Parallel convolutional towers with kernel sizes 3, 5, 7
+- Captures patterns at multiple time scales
+- Global average pooling for dimensionality reduction
+- Input: 30-day lookback window
 
-### Statistical Models
-- **Auto ARIMA**: Good for short-term forecasting with limited seasonality
-- **SARIMA**: Effective when strong seasonal patterns exist in OOE data
+**3. WaveNet-style Dilated CNN**
+- Exponentially increasing dilation rates (1, 2, 4, 8, 16, 32)
+- Causal padding maintains temporal order
+- Efficient long-range dependency modeling
+- Input: 14-day lookback window
 
-### Deep Learning Models
-- **LSTM/GRU**: Captures complex temporal dependencies and long-term patterns
-- **Hybrid Models**: Combines strengths of different architectures
-- **Stacked RNN**: Multiple recurrent layers on top of one layer.
+### Validation Strategy
+- **Walk-Forward Validation**: Realistic time-aware evaluation
+- **70/15/15 Split**: Training/Validation/Test data split
+- **Multi-step Evaluation**: Models trained for 3-step ahead prediction
+- **Real-world Simulation**: Retraining at each prediction step
 
-### Selecting the Best Model
+## 🛠️ Development
 
-The optimal model depends on:
-- Forecast horizon (short vs. long-term predictions)
-- Pattern complexity in your OOE data
-- Computational resources available
-- Required prediction accuracy
+### Setting Up Development Environment
+```bash
+# Clone and setup
+git clone https://github.com/yourusername/oee-manufacturing-analytics.git
+cd oee-manufacturing-analytics
 
-Review the performance metrics and visualizations to determine which model best suits your specific forecasting needs.
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # or `venv\Scripts\activate` on Windows
 
-## Troubleshooting
+# Install in development mode
+pip install -e .
+pip install -r requirements_dev.txt  # Includes testing tools
+
+# Run tests
+pytest tests/
+
+# Code formatting
+black app.py
+isort .
+```
+
+### Adding New Models
+1. Create model builder function in `app.py`
+2. Add to model options in `show_forecasting_page()`
+3. Configure hyperparameters and validation
+4. Test with walk-forward validation
+
+### Contributing
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📊 Example Dashboard Screenshots
+
+### Main Dashboard
+*![Main Dashboard](docs/images/main_dashboard.png)*
+- Real-time OEE metrics across all production lines
+- Performance comparison charts
+- Quick access to line-specific analysis
+
+### Forecasting Interface
+*![Forecasting](docs/images/forecasting.png)*
+- Model selection and configuration
+- Interactive forecast visualizations
+- Performance metrics and validation results
+
+### AI Advisory Chat
+*![AI Advisory](docs/images/ai_advisory.png)*
+- Natural language query interface
+- Contextual recommendations based on your data
+- Document source citations
+
+## 🔍 Troubleshooting
 
 ### Common Issues
 
-1. **Missing OOE dataset after running Notebook 1**:
-   - Ensure you have write permissions in the working directory
-   - Check for error messages related to file operations
-   - Verify that the calculation steps executed correctly
+**TensorFlow Import Errors (Windows)**
+```bash
+# Install Visual C++ Redistributable
+# Download from: https://docs.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 
-2. **Statistical Models Errors**:
-   - Non-stationary data: Apply additional differencing
-   - Convergence issues: Adjust model parameters or training settings
-   - Install pmdarima: `pip install pmdarima`
+# Or use CPU-only version
+pip uninstall tensorflow
+pip install tensorflow-cpu
+```
 
-3. **Deep Learning Model Errors**:
-   - GPU/memory issues: Reduce batch size or model complexity
-   - Overfitting: Increase dropout rate or add regularization
-   - Unstable training: Adjust learning rate or use gradient clipping
+**Memory Issues with Large Datasets**
+```python
+# Reduce batch size in model training
+BATCH_SIZE = 16  # Instead of 32
 
-### Getting Help
+# Use data generators for large files
+# Enable model checkpointing
+```
 
-If you encounter issues not covered in this documentation:
-1. Check the error messages carefully
-2. Refer to library documentation (TensorFlow, pmdarima, etc.)
-3. Create an issue in the project repository with details about your problem
+**Advisory System Setup Issues**
+```bash
+# Check NLTK data
+python -c "import nltk; nltk.download('punkt')"
 
-## References
+# Verify spaCy model
+python -c "import spacy; spacy.load('en_core_web_sm')"
 
-- OOE Calculation Methodology: [OEE Industry Standard](https://www.oee.com/)
-- Statistical Forecasting: [pmdarima Documentation](https://alkaline-ml.com/pmdarima/)
-- Deep Learning for Time Series: [TensorFlow Time Series Tutorial](https://www.tensorflow.org/tutorials/structured_data/time_series)
+# Test Gemini API connection
+python -c "import google.generativeai as genai; genai.configure(api_key='your_key')"
+```
+
+### Performance Optimization
+- **Use SSD storage** for faster data loading
+- **Enable GPU** for deep learning models (if available)
+- **Increase RAM** for large datasets (8GB+ recommended)
+- **Use model caching** to avoid retraining
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Areas for Contribution
+- 🔧 Additional forecasting models
+- 📊 New visualization types
+- 🤖 Enhanced AI advisory capabilities
+- 🌐 Multi-language support
+- 📱 Mobile app development
+- 🔌 ERP system integrations
+
+## 📞 Support
+
+- **Documentation**: [Wiki](https://github.com/yourusername/oee-manufacturing-analytics/wiki)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/oee-manufacturing-analytics/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/oee-manufacturing-analytics/discussions)
+- **Email**: support@oee-analytics.com
+
+## 🙏 Acknowledgments
+
+- **Manufacturing Domain Knowledge**: Based on industry best practices and ISO 22400 standards
+- **Deep Learning Architecture**: Inspired by WaveNet and ROCKET time series models
+- **AI Advisory System**: Powered by Google Gemini API and advanced RAG techniques
+- **Data Visualization**: Built with Plotly and Streamlit for interactive experiences
+
+## 🔮 Roadmap
+
+### Short Term (Q2 2024)
+- [ ] Real-time data streaming support
+- [ ] Enhanced mobile interface
+- [ ] Additional statistical models
+- [ ] Automated report generation
+
+### Medium Term (Q3-Q4 2024)
+- [ ] Multi-plant deployment
+- [ ] Advanced anomaly detection
+- [ ] Predictive maintenance integration
+- [ ] REST API development
+
+### Long Term (2025+)
+- [ ] Edge computing deployment
+- [ ] IoT sensor integration
+- [ ] Advanced AI recommendations
+- [ ] Industry 4.0 compliance
+
+---
+
+**⭐ Star this repository if you find it useful!**
+
+*Built with ❤️ for the manufacturing community*

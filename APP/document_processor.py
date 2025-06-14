@@ -191,7 +191,7 @@ class DocumentProcessor:
             file_size = os.path.getsize(file_path)
             metadata["file_size"] = file_size
             
-            # Method 1: Try pdfplumber first (better for complex layouts)
+            # Method 1:
             try:
                 with pdfplumber.open(file_path) as pdf:
                     text_parts = []

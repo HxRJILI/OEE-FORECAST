@@ -105,7 +105,7 @@ This section provides comprehensive documentation for the data processing compon
    - Duration calculations
    - Data completeness assessment
 
-🏭 **OEE Calculation Engine**
+ **OEE Calculation Engine**
 ============================
 
 .. py:class:: OEECalculator
@@ -286,7 +286,7 @@ This section provides comprehensive documentation for the data processing compon
              
              return results
 
-📊 **Daily Report Generation**
+ **Daily Report Generation**
 =============================
 
 .. py:function:: generate_daily_oee_reports(line_status_data, production_data, start_date=None, end_date=None)
@@ -385,7 +385,7 @@ This section provides comprehensive documentation for the data processing compon
           
           return daily_reports
 
-🔍 **Data Quality Assessment**
+ **Data Quality Assessment**
 =============================
 
 .. py:function:: assess_data_quality(line_status_data, production_data)
@@ -464,7 +464,7 @@ This section provides comprehensive documentation for the data processing compon
    - Production rate validation
    - Data range constraints
 
-⚡ **Performance Optimization**
+ **Performance Optimization**
 =============================
 
 **Efficient Data Processing**
@@ -524,7 +524,7 @@ This section provides comprehensive documentation for the data processing compon
           # Expensive calculation here
           return monthly_oee_results
 
-🔗 **Integration Utilities**
+ **Integration Utilities**
 ===========================
 
 **Streamlit Integration**
@@ -609,7 +609,7 @@ This section provides comprehensive documentation for the data processing compon
           "errors": []
       }
 
-📈 **Usage Examples**
+ **Usage Examples**
 ====================
 
 **Basic OEE Calculation**

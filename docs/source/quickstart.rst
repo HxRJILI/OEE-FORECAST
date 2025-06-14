@@ -10,7 +10,7 @@ OEE Insights 1: Data Processing and OEE Calculation
 
 This notebook serves as the foundation of our OEE analysis pipeline, implementing comprehensive data preprocessing and establishing the mathematical framework for OEE calculation.
 
-📋 **Overview**
+ **Overview**
 ===============
 
 The first notebook in our three-part series focuses on:
@@ -21,7 +21,7 @@ The first notebook in our three-part series focuses on:
 - **Data Visualization**: Initial exploratory data analysis
 - **Export Pipeline**: Generating clean datasets for subsequent analysis
 
-🎯 **Objectives**
+ **Objectives**
 ================
 
 1. **Establish Data Foundation**: Create a reliable, clean dataset from raw manufacturing logs
@@ -29,7 +29,7 @@ The first notebook in our three-part series focuses on:
 3. **Quality Assurance**: Detect and handle data anomalies, missing values, and inconsistencies
 4. **Standardization**: Create consistent data formats for downstream analysis
 
-📊 **Input Data Structure**
+ **Input Data Structure**
 ==========================
 
 **Primary Data Sources:**
@@ -72,7 +72,7 @@ The notebook implements a comprehensive status categorization system:
    NO_PLAN = ["No Plan"]
    END_OPS = ["End Of Operations"]
 
-🔧 **Data Processing Pipeline**
+ **Data Processing Pipeline**
 ==============================
 
 **Phase 1: Data Cleaning**
@@ -162,7 +162,7 @@ Critical logic for reconstructing missing finish times:
        else:
            finish_datetime.append(pd.NaT)
 
-**📐 Mathematical Framework: OEE Calculation**
+** Mathematical Framework: OEE Calculation**
 ===============================================
 
 **Core OEE Formula:**
@@ -220,7 +220,7 @@ Critical logic for reconstructing missing finish times:
    planned_statuses = ['Production', 'Scheduled Stop', 'Unexpected Stop']
    daily_planned_time = df_planned_time.groupby(['PRODUCTION_LINE', 'Date'])['Duration_Seconds'].sum()
 
-📈 **Data Aggregation and Analysis**
+ **Data Aggregation and Analysis**
 ====================================
 
 **Daily Metrics Calculation:**
@@ -249,7 +249,7 @@ Critical logic for reconstructing missing finish times:
    # Final OEE calculation
    daily_oee_data['OEE'] = daily_oee_data['Availability'] * daily_oee_data['Performance'] * daily_oee_data['Quality']
 
-📊 **Visualization and Exploratory Analysis**
+ **Visualization and Exploratory Analysis**
 =============================================
 
 **Production Line Performance Analysis:**
@@ -293,7 +293,7 @@ Critical logic for reconstructing missing finish times:
        marker='o', height=4, aspect=1.2
    )
 
-📄 **Output Files Generated**
+ **Output Files Generated**
 =============================
 
 The notebook generates several key output files:
@@ -319,7 +319,7 @@ The notebook generates several key output files:
    Total_Actual_Output,Ideal_Cycle_Time_Seconds,Availability,Performance,Quality,OEE
    2024-01-01,LINE-01,28800,25200,120,11.0,0.875,0.524,1.0,0.458
 
-🎯 **Key Results and Insights**
+ **Key Results and Insights**
 ==============================
 
 **Data Quality Assessment:**
@@ -375,7 +375,7 @@ The notebook generates several key output files:
 - **Missing Data Patterns**: Systematic gaps during maintenance windows
 - **Outlier Detection**: 2.1% of records flagged for review
 
-🔄 **Data Pipeline Flow**
+ **Data Pipeline Flow**
 ========================
 
 .. code-block::
@@ -400,7 +400,7 @@ The notebook generates several key output files:
         ↓
    Clean Datasets for Analysis
 
-⚠️ **Important Considerations**
+ **Important Considerations**
 ==============================
 
 **Data Assumptions:**
@@ -423,7 +423,7 @@ The notebook generates several key output files:
 - **LINE-05**: No production data found in current dataset
 - **Weekend Operations**: Limited weekend production data affects weekly patterns
 
-🔗 **Integration with Subsequent Notebooks**
+ **Integration with Subsequent Notebooks**
 ==========================================
 
 This notebook provides the foundation for:
@@ -443,7 +443,7 @@ This notebook provides the foundation for:
    - Interactive visualization backend
    - Forecasting model input preparation
 
-📚 **Technical References**
+ **Technical References**
 ==========================
 
 **OEE Calculation Standards:**

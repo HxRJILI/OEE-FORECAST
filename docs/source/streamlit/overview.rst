@@ -3,7 +3,7 @@ Streamlit Application Overview
 
 The OEE Forecasting and Analytics Streamlit application provides a comprehensive, interactive web interface for manufacturing performance analysis and forecasting. Built with modern web technologies, it offers real-time insights, advanced analytics, and AI-powered recommendations.
 
-🎯 **Application Philosophy**
+ **Application Philosophy**
 ============================
 
 **User-Centric Design:**
@@ -24,7 +24,7 @@ The OEE Forecasting and Analytics Streamlit application provides a comprehensive
    - **Practical Insights**: Actionable recommendations for operational improvement
    - **Scalable Architecture**: Designed for multiple production lines and facilities
 
-🏗️ **Application Architecture**
+ **Application Architecture**
 ===============================
 
 **Technology Stack:**
@@ -73,7 +73,7 @@ The OEE Forecasting and Analytics Streamlit application provides a comprehensive
    ├── Visualization Framework
    └── Advisory System Integration
 
-📱 **Page Structure and Navigation**
+ **Page Structure and Navigation**
 ===================================
 
 **Main Navigation Menu:**
@@ -119,7 +119,7 @@ The application uses a sidebar navigation system with clear page categories:
    ├── Planning → OEE Forecasting (🔮)
    └── Optimization → OEE Advisory (🤖)
 
-🎨 **Design System and Theming**
+ **Design System and Theming**
 ===============================
 
 **Visual Design Principles:**
@@ -179,7 +179,7 @@ The application uses a sidebar navigation system with clear page categories:
    ├── Mobile (320-768px): Single-column, touch-optimized interface
    └── Print (CSS): Clean, printable reports
 
-📊 **Data Visualization Framework**
+ **Data Visualization Framework**
 ==================================
 
 **Plotly Integration:**
@@ -272,7 +272,7 @@ The application uses Plotly for all interactive visualizations:
 - **Export Options**: PNG, PDF, SVG, HTML formats
 - **Responsive Sizing**: Automatic resizing for different screen sizes
 
-🎛️ **State Management and Performance**
+ **State Management and Performance**
 =======================================
 
 **Session State Architecture:**
@@ -325,7 +325,7 @@ The application uses Plotly for all interactive visualizations:
 3. **Visualization**: Optimized chart rendering with data sampling for large datasets
 4. **Memory Management**: Automatic cleanup of large objects and session state
 
-🔧 **Configuration and Customization**
+ **Configuration and Customization**
 =====================================
 
 **Application Configuration:**
@@ -373,7 +373,7 @@ The application uses Plotly for all interactive visualizations:
    - Alert thresholds and notifications
    - Data refresh intervals
 
-🚀 **Advanced Features**
+ **Advanced Features**
 =======================
 
 **Automatic Data Processing:**
@@ -460,7 +460,7 @@ The application uses Plotly for all interactive visualizations:
                if st.button(f"Analyze {line}", key=f"analyze_{line}"):
                    navigate_to_line_analysis(line)
 
-📱 **Mobile and Accessibility Features**
+ **Mobile and Accessibility Features**
 =======================================
 
 **Mobile Optimization:**
@@ -483,7 +483,7 @@ The application uses Plotly for all interactive visualizations:
 - **App-like Experience**: Full-screen mode and app installation
 - **Push Notifications**: Alert system for critical performance issues
 
-🔒 **Security and Data Privacy**
+ **Security and Data Privacy**
 ===============================
 
 **Data Security:**
@@ -506,7 +506,7 @@ The application uses Plotly for all interactive visualizations:
 - **Anonymization Options**: Remove identifying information from exports
 - **Compliance Support**: GDPR, CCPA compliance features
 
-🛠️ **Development and Deployment**
+ **Development and Deployment**
 =================================
 
 **Development Workflow:**
@@ -554,7 +554,7 @@ The application uses Plotly for all interactive visualizations:
        }
    }
 
-🎯 **Business Value and ROI**
+ **Business Value and ROI**
 ============================
 
 **Quantifiable Benefits:**
@@ -589,7 +589,7 @@ The application uses Plotly for all interactive visualizations:
 - **Competitive Advantage**: Industry-leading performance visibility
 - **Scalability**: Grow from single line to enterprise-wide deployment
 
-🔄 **Integration Ecosystem**
+ **Integration Ecosystem**
 ===========================
 
 **Data Source Integration:**
@@ -622,7 +622,7 @@ The application uses Plotly for all interactive visualizations:
        'api': 'RESTful API for system integration'
    }
 
-📈 **Future Roadmap and Enhancements**
+ **Future Roadmap and Enhancements**
 =====================================
 
 **Short-Term Enhancements (3-6 months):**
@@ -649,7 +649,7 @@ The application uses Plotly for all interactive visualizations:
    - Industry-specific templates and configurations
    - Training and certification programs
 
-📚 **Learning Resources and Support**
+ **Learning Resources and Support**
 ====================================
 
 **Getting Started:**

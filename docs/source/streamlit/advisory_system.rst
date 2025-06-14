@@ -3,7 +3,7 @@ OEE Advisory System
 
 The OEE Advisory System is an advanced AI-powered component that provides intelligent recommendations and insights for manufacturing optimization. Built using Retrieval-Augmented Generation (RAG) technology, it combines domain-specific knowledge with real-time production data to deliver actionable advice.
 
-🤖 **System Architecture**
+ **System Architecture**
 ==========================
 
 **Core Components:**
@@ -36,7 +36,7 @@ The OEE Advisory System is an advanced AI-powered component that provides intell
 - **Document Processing**: PyPDF2 and pdfplumber for PDF handling
 - **NLP Pipeline**: spaCy and NLTK for text preprocessing
 
-🚀 **Getting Started**
+ **Getting Started**
 ======================
 
 **Prerequisites:**
@@ -83,7 +83,7 @@ The advisory system requires a knowledge base to provide meaningful recommendati
    - Builds the searchable knowledge base
    - Validates system functionality
 
-📚 **Document Management Interface**
+ **Document Management Interface**
 ===================================
 
 **Upload Process:**
@@ -122,7 +122,7 @@ The advisory system requires a knowledge base to provide meaningful recommendati
 - **Content**: Text-based PDFs (OCR for scanned documents not included)
 - **Language**: English language documents for optimal performance
 
-🧠 **AI Chat Interface**
+ **AI Chat Interface**
 ========================
 
 **Query Types:**
@@ -200,7 +200,7 @@ The system automatically considers:
 - **Industry Benchmarks**: Compares your performance with manufacturing standards
 - **Knowledge Base**: Draws from uploaded documents and best practices
 
-🎯 **Advanced Features**
+ **Advanced Features**
 =======================
 
 **Contextual Recommendations:**
@@ -264,7 +264,7 @@ Real-time data integration enhances advisory capabilities:
        ├── Best-in-class performance
        └── Improvement potential
 
-🔧 **System Configuration**
+ **System Configuration**
 ==========================
 
 **API Configuration:**
@@ -309,7 +309,7 @@ Real-time data integration enhances advisory capabilities:
        'metric': 'METRIC_INNER_PRODUCT'
    }
 
-🛠️ **Troubleshooting**
+ **Troubleshooting**
 ======================
 
 **Common Issues and Solutions:**
@@ -364,7 +364,7 @@ Real-time data integration enhances advisory capabilities:
 - **Response Time**: Optimize chunk size and embedding batch size
 - **Quality**: Use high-quality source documents for better recommendations
 
-📊 **Usage Analytics**
+ **Usage Analytics**
 =====================
 
 **System Metrics:**
@@ -383,7 +383,7 @@ The advisory system tracks important usage metrics:
 - **Model Updates**: Periodic updates to embedding and language models
 - **Performance Tuning**: Optimization based on usage patterns
 
-🔗 **Integration Examples**
+ **Integration Examples**
 ==========================
 
 **Production Line Integration:**

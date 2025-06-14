@@ -10,7 +10,7 @@ OEE Insights 2: Statistical Analysis and ARIMA Modeling
 
 This notebook builds upon the preprocessed data from OEE_Insights_1 to conduct comprehensive statistical analysis and implement ARIMA (AutoRegressive Integrated Moving Average) models for OEE forecasting.
 
-📋 **Overview**
+ **Overview**
 ===============
 
 The second notebook focuses on:
@@ -21,7 +21,7 @@ The second notebook focuses on:
 - **Forecasting**: Multi-step ahead predictions with confidence intervals
 - **Comparative Analysis**: Performance evaluation across production lines
 
-🎯 **Objectives**
+ **Objectives**
 ================
 
 1. **Time Series Characterization**: Identify statistical properties of OEE data
@@ -29,7 +29,7 @@ The second notebook focuses on:
 3. **Forecasting Framework**: Establish baseline statistical forecasting capability
 4. **Performance Benchmarking**: Create statistical baselines for deep learning comparison
 
-📊 **Statistical Framework**
+ **Statistical Framework**
 ===========================
 
 **Time Series Analysis Components:**
@@ -49,7 +49,7 @@ The second notebook focuses on:
    - Automated model selection with pmdarima
    - Cross-validation for model robustness
 
-🔍 **Stationarity Analysis**
+ **Stationarity Analysis**
 ============================
 
 **Testing Methodology:**
@@ -153,7 +153,7 @@ For each production line, the notebook conducts comprehensive stationarity tests
 
 **Interpretation**: Stationary series, suitable for ARMA modeling.
 
-📈 **ACF/PACF Analysis**
+ **ACF/PACF Analysis**
 ========================
 
 **Pattern Recognition for Model Selection:**
@@ -202,7 +202,7 @@ The notebook generates ACF and PACF plots to identify appropriate ARIMA paramete
    - **PACF**: Cutoff after lag 2-3
    - **Suggested Model**: ARIMA(2,0,0) or ARIMA(3,0,0)
 
-🤖 **Automated Model Selection**
+ **Automated Model Selection**
 ===============================
 
 **pmdarima Auto-ARIMA Implementation:**
@@ -260,7 +260,7 @@ The notebook generates ACF and PACF plots to identify appropriate ARIMA paramete
      - -156.89
      - Mixed ARMA(1,1) model
 
-🎯 **Model Diagnostics**
+ **Model Diagnostics**
 ========================
 
 **Residual Analysis:**
@@ -291,7 +291,7 @@ For each fitted model, comprehensive diagnostic testing:
 - **Heteroscedasticity**: Some models show mild heteroscedasticity
 - **Model Adequacy**: All selected models pass basic adequacy tests
 
-🔄 **Walk-Forward Validation**
+ **Walk-Forward Validation**
 =============================
 
 **Methodology:**
@@ -373,7 +373,7 @@ Implements realistic validation using expanding window approach:
      - 0.0834
      - 9.3%
 
-📊 **Forecasting Results**
+ **Forecasting Results**
 ==========================
 
 **Multi-Step Forecasting:**
@@ -425,7 +425,7 @@ Each model generates forecasts with confidence intervals:
    - **Confidence intervals**: Moderate width
    - **Best for**: Strategic planning, corporate reporting
 
-📈 **Visual Analysis Results**
+ **Visual Analysis Results**
 =============================
 
 **Forecast Visualization Example (LINE-06):**
@@ -454,7 +454,7 @@ Each model generates forecasts with confidence intervals:
    plt.grid(True)
    plt.show()
 
-🔍 **Model Interpretation**
+ **Model Interpretation**
 ===========================
 
 **Statistical Insights by Model Type:**
@@ -483,7 +483,7 @@ Each model generates forecasts with confidence intervals:
    - **Implication**: Highly stable and predictable performance
    - **Management Focus**: Use as benchmark for other lines
 
-⚖️ **Model Comparison Framework**
+ **Model Comparison Framework**
 =================================
 
 **Selection Criteria:**
@@ -536,7 +536,7 @@ Each model generates forecasts with confidence intervals:
      - 15.2%
      - Handles non-stationarity well
 
-🎯 **Business Impact Analysis**
+ **Business Impact Analysis**
 ==============================
 
 **Operational Implications:**
@@ -560,7 +560,7 @@ Each model generates forecasts with confidence intervals:
 3. **Maintenance Optimization**: Trend analysis informs preventive maintenance timing
 4. **Investment Decisions**: Model stability indicates equipment replacement priorities
 
-🔗 **Integration Pathway**
+ **Integration Pathway**
 =========================
 
 **Connection to Deep Learning (OEE_Insights_3):**
@@ -581,7 +581,7 @@ ARIMA models are integrated into the forecasting application:
 - **Fallback Option**: Statistical models used when deep learning is unavailable
 - **Ensemble Forecasting**: Combined predictions for improved accuracy
 
-📚 **Technical Implementation Notes**
+ **Technical Implementation Notes**
 ====================================
 
 **Libraries and Versions:**
@@ -613,7 +613,7 @@ ARIMA models are integrated into the forecasting application:
        model = pm.ARIMA(order=(1,0,1)).fit(data)
        warnings.warn(f"Auto-ARIMA failed, using fallback: {e}")
 
-⚠️ **Limitations and Assumptions**
+ **Limitations and Assumptions**
 =================================
 
 **Model Limitations:**
@@ -637,7 +637,7 @@ ARIMA models are integrated into the forecasting application:
 3. **Regime Changes**: Models may not capture sudden operational shifts
 4. **External Factors**: Economic, seasonal, or policy changes not modeled
 
-🚀 **Next Steps**
+ **Next Steps**
 ================
 
 **Immediate Actions:**

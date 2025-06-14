@@ -3,7 +3,7 @@ OEE Forecasting Interface
 
 The OEE Forecasting page provides advanced predictive analytics capabilities, enabling manufacturing teams to forecast production line performance using both statistical and deep learning models.
 
-🔮 **Forecasting Overview**
+ **Forecasting Overview**
 ===========================
 
 **Purpose and Capabilities:**
@@ -23,7 +23,7 @@ The system provides two complementary approaches:
 1. **Basic Statistical Methods**: Quick, interpretable forecasts using traditional time series techniques
 2. **Advanced Deep Learning**: Sophisticated neural network models for complex pattern recognition
 
-🎯 **Interface Architecture**
+ **Interface Architecture**
 ============================
 
 **Page Structure:**
@@ -72,7 +72,7 @@ The interface automatically adapts based on system capabilities:
        # Full deep learning interface
        show_advanced_forecasting_interface(daily_oee_data, overall_daily_oee)
 
-🛠️ **System Diagnostics and Troubleshooting**
+ **System Diagnostics and Troubleshooting**
 ==============================================
 
 **Comprehensive System Status:**
@@ -156,7 +156,7 @@ For Windows users experiencing TensorFlow issues, detailed troubleshooting guida
    conda activate tf_env
                """, language="bash")
 
-📊 **Basic Statistical Forecasting**
+ **Basic Statistical Forecasting**
 ====================================
 
 **Always-Available Fallback Methods:**
@@ -281,7 +281,7 @@ Even when deep learning is unavailable, users can access statistical forecasting
        
        st.plotly_chart(fig, use_container_width=True)
 
-🤖 **Advanced Deep Learning Interface**
+ **Advanced Deep Learning Interface**
 =======================================
 
 **Configuration Section:**
@@ -472,7 +472,7 @@ The advanced interface provides comprehensive model configuration options:
            best_model_name = comparison_df.loc[comparison_df['MAE'].idxmin(), 'Model']
            st.info(f"💡 **Recommendation**: {best_model_name} shows the best performance for your data pattern.")
 
-🚀 **Forecast Generation Process**
+ **Forecast Generation Process**
 =================================
 
 **Interactive Forecast Creation:**
@@ -582,7 +582,7 @@ The advanced interface provides comprehensive model configuration options:
                progress_bar.empty()
                status_text.empty()
 
-📈 **Results Visualization and Analysis**
+ **Results Visualization and Analysis**
 =========================================
 
 **Interactive Forecast Display:**
@@ -733,7 +733,7 @@ The advanced interface provides comprehensive model configuration options:
        else:
            return "Critical performance, immediate action required"
 
-🎯 **Model Information and Education**
+ **Model Information and Education**
 =====================================
 
 **Model Architecture Explanations:**
@@ -838,7 +838,7 @@ The advanced interface provides comprehensive model configuration options:
                - Retrain models when accuracy degrades
                """)
 
-📤 **Export and Integration Features**
+ **Export and Integration Features**
 =====================================
 
 **Forecast Export Options:**
@@ -902,7 +902,7 @@ The advanced interface provides comprehensive model configuration options:
        
        return export_df.to_csv(index=False)
 
-🔄 **Continuous Improvement Features**
+ **Continuous Improvement Features**
 =====================================
 
 **Forecast Accuracy Tracking:**
@@ -969,7 +969,7 @@ The advanced interface provides comprehensive model configuration options:
        else:
            st.success("✅ All models performing within expected parameters")
 
-🚀 **Future Enhancements**
+ **Future Enhancements**
 =========================
 
 **Planned Features:**
@@ -1001,7 +1001,7 @@ The advanced interface provides comprehensive model configuration options:
            - Automated optimization recommendations
            """)
 
-📚 **User Guide and Best Practices**
+ **User Guide and Best Practices**
 ===================================
 
 **Forecasting Workflow:**

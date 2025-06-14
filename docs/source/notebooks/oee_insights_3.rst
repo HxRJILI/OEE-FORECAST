@@ -10,7 +10,7 @@ OEE Insights 3: Deep Learning Models for Advanced Forecasting
 
 This final notebook in the series implements state-of-the-art deep learning architectures for OEE forecasting, building upon the statistical foundation established in the previous notebooks to achieve superior predictive performance.
 
-📋 **Overview**
+ **Overview**
 ===============
 
 The third notebook focuses on:
@@ -21,7 +21,7 @@ The third notebook focuses on:
 - **Comparative Analysis**: Deep learning vs. statistical model performance evaluation
 - **Production-Ready Models**: Optimized architectures suitable for real-time deployment
 
-🎯 **Objectives**
+ **Objectives**
 ================
 
 1. **Advanced Forecasting**: Develop neural networks surpassing statistical model performance
@@ -29,7 +29,7 @@ The third notebook focuses on:
 3. **Multi-Horizon Prediction**: Enable planning across different time horizons
 4. **Production Deployment**: Create models suitable for integration into manufacturing systems
 
-🧠 **Deep Learning Framework**
+ **Deep Learning Framework**
 =============================
 
 **Model Architecture Categories:**
@@ -60,7 +60,7 @@ The third notebook focuses on:
    tf.random.set_seed(42)
    np.random.seed(42)
 
-🏗️ **Model Architectures**
+ **Model Architectures**
 ==========================
 
 **Model 1: Stacked SimpleRNN with Masking**
@@ -288,7 +288,7 @@ The third notebook focuses on:
    - **Base Filters**: 32
    - **Kernel Size**: 2
 
-🔄 **Training Methodology**
+ **Training Methodology**
 ===========================
 
 **Walk-Forward Validation Framework:**
@@ -398,7 +398,7 @@ The third notebook focuses on:
      - 32
      - 0.0006831
 
-📊 **Comprehensive Results Analysis**
+ **Comprehensive Results Analysis**
 ====================================
 
 **Performance by Production Line:**
@@ -568,7 +568,7 @@ The third notebook focuses on:
 
 **Analysis**: Overall OEE shows high MAPE due to aggregation effects. Stacked RNNs perform best for aggregate predictions.
 
-🏆 **Champion Models by Metric**
+ **Champion Models by Metric**
 ===============================
 
 **Best MAE Performance:**
@@ -589,7 +589,7 @@ The third notebook focuses on:
 - **Stacked RNN with Masking**: Performs well across all production lines
 - **Multi-Kernel CNN**: Excellent for stable lines with sufficient data
 
-🔬 **Model Architecture Analysis**
+ **Model Architecture Analysis**
 =================================
 
 **Stacked RNN with Masking:**
@@ -646,7 +646,7 @@ The third notebook focuses on:
    - Complex temporal dependencies
    - Multi-step prediction requirements
 
-📈 **Business Impact Assessment**
+ **Business Impact Assessment**
 ===============================
 
 **Production Line Optimization Recommendations:**
@@ -707,7 +707,7 @@ The third notebook focuses on:
      - 4%
      - $150K
 
-🚀 **Production Deployment Strategy**
+ **Production Deployment Strategy**
 ====================================
 
 **Model Selection Framework:**
@@ -754,7 +754,7 @@ The third notebook focuses on:
 3. **Monthly Review**: Architecture evaluation and potential model switching
 4. **Quarterly Optimization**: Hyperparameter tuning and feature engineering
 
-🔧 **Technical Implementation**
+ **Technical Implementation**
 ==============================
 
 **Sequence Generation for Multi-Step Forecasting:**
@@ -831,7 +831,7 @@ The third notebook focuses on:
        
        return history
 
-⚠️ **Known Limitations and Future Improvements**
+ **Known Limitations and Future Improvements**
 ===============================================
 
 **Current Limitations:**
@@ -888,7 +888,7 @@ Several models show extremely high MAPE values due to near-zero actual values in
        # - Multi-task learning capability
        pass
 
-🔗 **Integration with Production Systems**
+ **Integration with Production Systems**
 =========================================
 
 **Streamlit Application Integration:**
@@ -941,7 +941,7 @@ The models are fully integrated into the Streamlit dashboard:
        # Post-process and return results
        return postprocess_forecast(forecast, line_id)
 
-📊 **Comparative Analysis: Deep Learning vs Statistical Models**
+ **Comparative Analysis: Deep Learning vs Statistical Models**
 ==============================================================
 
 **Performance Comparison Table:**
@@ -996,7 +996,7 @@ The models are fully integrated into the Streamlit dashboard:
    │   └── Complex Dependencies? → Deep Learning (WaveNet)
    └── Simple Patterns? → ARIMA
 
-🎯 **Conclusions and Recommendations**
+ **Conclusions and Recommendations**
 =====================================
 
 **Key Findings:**

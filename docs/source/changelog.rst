@@ -5,7 +5,7 @@ This document tracks all notable changes to the OEE Forecasting and Analytics pr
 
 The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`_, and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_.
 
-🚀 **[Unreleased]**
+ **[Unreleased]**
 ==================
 
 **Added**
@@ -32,7 +32,7 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 - Mobile application for iOS/Android
 - Advanced visualization with 3D charts
 
-📊 **[2.1.0] - 2024-01-15**
+ **[2.1.0] - 2024-01-15**
 ===========================
 
 **Added**
@@ -86,7 +86,7 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 - Updated API endpoints for forecasting service
 - Modified configuration file format for deployment
 
-🔧 **[2.0.0] - 2023-12-01**
+ **[2.0.0] - 2023-12-01**
 ===========================
 
 **Major Release - Complete System Redesign**
@@ -131,7 +131,7 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 - Improved error handling and logging
 - Enhanced visualization capabilities
 
-📈 **[1.5.0] - 2023-10-15**
+ **[1.5.0] - 2023-10-15**
 ===========================
 
 **Added**
@@ -272,7 +272,7 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 - LINE-04: Trend-following behavior with autoregressive patterns
 - LINE-06: High predictability with excellent performance (best results)
 
-🔄 **Migration Guides**
+ **Migration Guides**
 ======================
 
 **Migrating from v1.x to v2.0**
@@ -339,7 +339,7 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 
    Set up Prometheus and Grafana monitoring using provided configurations.
 
-📋 **Version Support Policy**
+ **Version Support Policy**
 ============================
 
 **Current Support Status**
@@ -389,7 +389,7 @@ The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.0.0/>`
 - **Deprecated**: No updates, migration recommended
 - **End of Life**: No support, immediate migration required
 
-🎯 **Roadmap and Future Plans**
+ **Roadmap and Future Plans**
 ==============================
 
 **Short-term Goals (Next 3-6 months)**

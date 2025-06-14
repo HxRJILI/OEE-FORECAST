@@ -3,7 +3,7 @@ Dashboard Features and Navigation
 
 The main dashboard serves as the central command center for OEE monitoring and analysis, providing real-time insights into manufacturing performance across all production lines.
 
-🏠 **Main Dashboard Overview**
+ **Main Dashboard Overview**
 =============================
 
 **Purpose and Scope:**
@@ -24,7 +24,7 @@ The main dashboard provides a comprehensive overview of manufacturing performanc
 4. **Performance-Based Color Coding**: Immediate visual status recognition
 5. **Responsive Layout**: Optimal viewing on all device sizes
 
-📊 **Top-Level Metrics Section**
+ **Top-Level Metrics Section**
 ===============================
 
 **Overview Metrics Display:**
@@ -105,7 +105,7 @@ The dashboard header presents four key performance indicators:
        
        return current_metrics
 
-🏭 **Production Line Status Grid**
+ **Production Line Status Grid**
 ==================================
 
 **Interactive Line Status Buttons:**
@@ -202,7 +202,7 @@ The production line status section displays real-time status for each active lin
      - Red (#DC143C)
      - Critical, immediate action required
 
-⚖️ **Performance Comparison Section**
+ **Performance Comparison Section**
 ====================================
 
 **Interactive Metric Selection:**
@@ -283,7 +283,7 @@ Users can compare production lines across different performance metrics:
        
        return fig
 
-🏆 **Performance Ranking Section**
+ **Performance Ranking Section**
 =================================
 
 **Dynamic Ranking Table:**
@@ -375,7 +375,7 @@ The ranking section provides a comprehensive performance leaderboard:
      - Download ranking data
      - CSV, Excel formats available
 
-📈 **Trend Visualization Section**
+ **Trend Visualization Section**
 =================================
 
 **Dual Chart Layout:**
@@ -528,7 +528,7 @@ The dashboard features two complementary trend visualizations:
        
        return fig
 
-📋 **Summary Data Table**
+ **Summary Data Table**
 ========================
 
 **Comprehensive Production Summary:**
@@ -610,7 +610,7 @@ The bottom section provides a detailed data table for reference:
      - Download table data
      - Offline analysis and reporting
 
-🎯 **Quick Actions and Navigation**
+ **Quick Actions and Navigation**
 ==================================
 
 **AI Advisory Integration (Optional):**
@@ -671,7 +671,7 @@ The dashboard provides intelligent navigation based on current performance:
                    st.session_state.page = "🔮 OEE Forecasting"
                    st.rerun()
 
-📱 **Mobile-Optimized Dashboard**
+ **Mobile-Optimized Dashboard**
 ================================
 
 **Responsive Design Features:**
@@ -709,7 +709,7 @@ The dashboard automatically adapts to different screen sizes:
        else:
            create_desktop_dashboard()
 
-🔄 **Real-Time Updates and Refresh**
+ **Real-Time Updates and Refresh**
 ===================================
 
 **Automatic Data Refresh:**
@@ -752,7 +752,7 @@ The dashboard supports automatic updates when new data is available:
            last_update = get_last_data_update_time()
            st.caption(f"Last updated: {last_update}")
 
-⚙️ **Dashboard Customization Options**
+ **Dashboard Customization Options**
 ======================================
 
 **User Preferences:**
@@ -808,7 +808,7 @@ The dashboard supports automatic updates when new data is available:
                generate_shareable_link()
                st.success("Link copied to clipboard!")
 
-🎯 **Performance Monitoring and Alerts**
+ **Performance Monitoring and Alerts**
 =======================================
 
 **Automated Alert System:**
@@ -846,7 +846,7 @@ The dashboard supports automatic updates when new data is available:
            else:
                st.warning(f"⚠️ {alert['message']}")
 
-🚀 **Advanced Dashboard Features**
+ **Advanced Dashboard Features**
 =================================
 
 **Drill-Down Capabilities:**
@@ -890,7 +890,7 @@ Every chart and metric supports drill-down analysis:
            comparison_chart = create_period_comparison_chart(period1, period2)
            st.plotly_chart(comparison_chart, use_container_width=True)
 
-📈 **Business Intelligence Integration**
+ **Business Intelligence Integration**
 =======================================
 
 **KPI Dashboard Integration:**
@@ -915,7 +915,7 @@ The dashboard can integrate with existing BI systems:
        
        return api_endpoints, export_formats
 
-📚 **Dashboard Usage Best Practices**
+ **Dashboard Usage Best Practices**
 ====================================
 
 **Daily Operations:**

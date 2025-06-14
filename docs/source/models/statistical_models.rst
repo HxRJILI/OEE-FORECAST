@@ -3,7 +3,7 @@ Statistical Models for OEE Forecasting
 
 This section provides comprehensive documentation of the statistical time series models used for OEE forecasting in the OEE_Insights_2 notebook. These models serve as baseline approaches and provide interpretable insights into production line performance patterns.
 
-📊 **Model Overview**
+ **Model Overview**
 ====================
 
 **ARIMA Model Framework:**
@@ -36,7 +36,7 @@ The Auto-Regressive Integrated Moving Average (ARIMA) models form the foundation
       ├── Confidence Intervals
       └── Performance Metrics
 
-🎯 **Line-Specific Model Results**
+ **Line-Specific Model Results**
 =================================
 
 **LINE-01: ARIMA(0,1,2)**
@@ -168,7 +168,7 @@ LINE-04's AR(2) structure indicates strong persistence where current performance
 
 LINE-06 exhibits the most predictable behavior with a simple AR(1) structure. The strong autoregressive component with mean reversion suggests stable, well-controlled production processes with consistent operational practices.
 
-🔍 **Model Diagnostic Analysis**
+ **Model Diagnostic Analysis**
 ===============================
 
 **Stationarity Testing:**
@@ -274,7 +274,7 @@ LINE-06 exhibits the most predictable behavior with a simple AR(1) structure. Th
    ✓ No serial correlation (DW=2.01)
    ✓ Homoscedastic errors (BP p=0.234)
 
-📈 **Forecasting Performance**
+ **Forecasting Performance**
 =============================
 
 **Walk-Forward Validation:**
@@ -370,7 +370,7 @@ LINE-06 exhibits the most predictable behavior with a simple AR(1) structure. Th
       - Most complex dynamics
       - Challenging to forecast
 
-🎯 **Business Applications**
+ **Business Applications**
 ===========================
 
 **Short-Term Forecasting (1-7 days):**
@@ -420,7 +420,7 @@ Statistical models excel at short-term predictions where:
        
        return anomalies
 
-🔧 **Model Implementation**
+ **Model Implementation**
 ==========================
 
 **Auto-ARIMA Implementation:**
@@ -500,7 +500,7 @@ Statistical models excel at short-term predictions where:
        
        return results
 
-⚡ **Model Strengths and Limitations**
+ **Model Strengths and Limitations**
 ====================================
 
 **Strengths:**
@@ -541,7 +541,7 @@ Statistical models excel at short-term predictions where:
    ✗ Large datasets available
    ✗ Maximum accuracy required
 
-🔗 **Integration with Application**
+ **Integration with Application**
 =================================
 
 **Streamlit Integration:**

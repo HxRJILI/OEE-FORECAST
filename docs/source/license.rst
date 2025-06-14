@@ -3,7 +3,7 @@ License
 
 The OEE Forecasting and Analytics project is released under the Apache License 2.0, which allows for both commercial and non-commercial use while providing explicit patent grants and stronger protection for contributors and users.
 
-📄 **Apache License 2.0**
+ **Apache License 2.0**
 =========================
 
 **Copyright 2024 OEE Forecasting and Analytics Project Contributors**
@@ -228,7 +228,7 @@ limitations under the License.
    See the License for the specific language governing permissions and
    limitations under the License.
 
-🎯 **What This Means**
+ **What This Means**
 ======================
 
 The Apache License 2.0 provides more comprehensive protections and permissions compared to simpler licenses:
@@ -236,31 +236,31 @@ The Apache License 2.0 provides more comprehensive protections and permissions c
 **You CAN:**
 -----------
 
-✅ **Commercial Use**
+ **Commercial Use**
    - Use this software in commercial manufacturing environments
    - Integrate it into proprietary systems and solutions
    - Sell products or services that incorporate this software
    - Use it in consulting and service engagements
 
-✅ **Modification**
+ **Modification**
    - Modify the source code to fit your specific needs
    - Customize algorithms and models for your industry
    - Add new features and capabilities
    - Optimize for your hardware and environment
 
-✅ **Distribution**
+ **Distribution**
    - Share the software with colleagues and partners
    - Include it in larger software packages
    - Distribute modified versions
    - Create and distribute derivative works
 
-✅ **Private Use**
+ **Private Use**
    - Use internally within your organization
    - Modify for internal purposes without sharing changes
    - Deploy in private cloud or on-premises environments
    - Use for research and development
 
-✅ **Patent Grant Protection**
+ **Patent Grant Protection**
    - Receive an explicit grant of patent rights from contributors
    - Protection against patent litigation from contributors
    - Defensive patent clauses that terminate bad-faith patent attacks
@@ -268,39 +268,39 @@ The Apache License 2.0 provides more comprehensive protections and permissions c
 **You MUST:**
 ------------
 
-📋 **Provide Attribution**
+ **Provide Attribution**
    - Include the Apache License 2.0 text in any distribution
    - Maintain copyright notices in source code
    - Credit the original authors appropriately
    - Include a NOTICE file if one exists
 
-📋 **Document Changes**
+ **Document Changes**
    - Mark modified files with prominent notices stating changes were made
    - Provide clear indication of what was changed
    - Maintain traceability of modifications
 
-📋 **License Compatibility**
+ **License Compatibility**
    - Ensure any additional license terms don't conflict with Apache 2.0
    - Include license information for derivative works
 
 **You CANNOT:**
 --------------
 
-❌ **Use Trademarks**
+ **Use Trademarks**
    - Cannot use project names, trademarks, or service marks without permission
    - Cannot imply endorsement by original authors
    - Must clearly identify your modifications as separate
 
-❌ **Patent Litigation**
+ **Patent Litigation**
    - Cannot sue contributors for patent infringement related to their contributions
    - Patent licenses terminate if you initiate patent litigation
 
-❌ **Hold Authors Liable**
+ **Hold Authors Liable**
    - The software is provided "as is" without warranty
    - Authors are not responsible for any damages or issues
    - No guarantee of fitness for particular purposes
 
-🏭 **Manufacturing Industry Benefits**
+ **Manufacturing Industry Benefits**
 =====================================
 
 **Enterprise-Friendly License**
@@ -331,7 +331,7 @@ Enhanced protections for production deployments:
 - **Compliance**: Meet enterprise compliance requirements for open source usage
 - **Documentation**: Comprehensive license documentation for audit trails
 
-🤝 **Third-Party Dependencies**
+ **Third-Party Dependencies**
 ==============================
 
 This project incorporates several third-party libraries. The Apache 2.0 license is compatible with most common open source licenses:
@@ -348,25 +348,25 @@ This project incorporates several third-party libraries. The Apache 2.0 license 
      - Compatibility Status
    * - **Streamlit**
      - Apache 2.0
-     - ✅ Fully Compatible
+     -  Fully Compatible
    * - **TensorFlow**
      - Apache 2.0
-     - ✅ Fully Compatible
+     -  Fully Compatible
    * - **Pandas**
      - BSD 3-Clause
-     - ✅ Compatible
+     -  Compatible
    * - **NumPy**
      - BSD 3-Clause
-     - ✅ Compatible
+     -  Compatible
    * - **Scikit-learn**
      - BSD 3-Clause
-     - ✅ Compatible
+     -  Compatible
    * - **Plotly**
      - MIT
-     - ✅ Compatible
+     -  Compatible
    * - **Matplotlib**
      - PSF License
-     - ✅ Compatible
+     -  Compatible
 
 **License Compliance**
 ---------------------
@@ -377,7 +377,7 @@ All included dependencies allow for:
 - Integration into proprietary systems
 - Patent protection (where applicable)
 
-📚 **Additional Legal Information**
+ **Additional Legal Information**
 ==================================
 
 **Patent Provisions**
@@ -419,7 +419,7 @@ The Apache 2.0 license is internationally recognized and provides:
 - **Export Compliance**: Clear terms for international distribution
 - **Standards Alignment**: Aligns with international open source standards
 
-🌍 **Global Manufacturing Standards**
+ **Global Manufacturing Standards**
 ====================================
 
 **Regulatory Compliance**
@@ -442,7 +442,7 @@ The license addresses software rights but users must still consider:
 - **Local Laws**: Respect for local data protection and privacy laws
 - **Audit Requirements**: Maintenance of audit trails as required by regulations
 
-🤝 **Commercial Support and Services**
+ **Commercial Support and Services**
 =====================================
 
 **Open Source vs. Commercial**
@@ -461,7 +461,7 @@ The license addresses software rights but users must still consider:
 - **Commercial Warranty**: Optional commercial warranty and support agreements
 - **Professional Services**: Implementation, training, and customization services
 
-📧 **Contact Information**
+ **Contact Information**
 =========================
 
 **For License Questions:**

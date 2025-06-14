@@ -3,36 +3,36 @@ Contributing Guide
 
 Thank you for your interest in contributing to the OEE Forecasting and Analytics project! This guide will help you understand how to contribute effectively to make this project better for the manufacturing community.
 
-🤝 **Ways to Contribute**
+ **Ways to Contribute**
 =========================
 
 We welcome various types of contributions from the community:
 
 **Code Contributions**
 ---------------------
-- 🐛 **Bug Fixes**: Fix issues and improve stability
-- ✨ **New Features**: Add new functionality and capabilities
-- 🔧 **Improvements**: Enhance existing features and performance
-- 📚 **Documentation**: Improve and expand documentation
-- 🧪 **Tests**: Add or improve test coverage
+-  **Bug Fixes**: Fix issues and improve stability
+-  **New Features**: Add new functionality and capabilities
+-  **Improvements**: Enhance existing features and performance
+-  **Documentation**: Improve and expand documentation
+-  **Tests**: Add or improve test coverage
 
 **Non-Code Contributions**
 -------------------------
-- 📝 **Documentation**: Write tutorials, guides, and examples
-- 🎨 **Design**: Improve UI/UX and create visual assets
-- 🔍 **Testing**: Test new features and report bugs
-- 💬 **Community**: Help others in discussions and forums
-- 🌐 **Translation**: Translate documentation and interface
-- 📊 **Data**: Contribute sample datasets or use cases
+-  **Documentation**: Write tutorials, guides, and examples
+-  **Design**: Improve UI/UX and create visual assets
+-  **Testing**: Test new features and report bugs
+-  **Community**: Help others in discussions and forums
+-  **Translation**: Translate documentation and interface
+-  **Data**: Contribute sample datasets or use cases
 
 **Research and Analysis**
 ------------------------
-- 🔬 **Model Research**: Develop new forecasting algorithms
-- 📈 **Performance Analysis**: Benchmark and optimize existing models
-- 🏭 **Industry Insights**: Share manufacturing domain expertise
-- 📋 **Use Cases**: Document real-world implementation scenarios
+-  **Model Research**: Develop new forecasting algorithms
+-  **Performance Analysis**: Benchmark and optimize existing models
+-  **Industry Insights**: Share manufacturing domain expertise
+-  **Use Cases**: Document real-world implementation scenarios
 
-🚀 **Getting Started**
+ **Getting Started**
 ======================
 
 **Prerequisites**
@@ -98,7 +98,7 @@ Before contributing, ensure you have:
       # Run the application
       streamlit run app.py
 
-📋 **Development Workflow**
+ **Development Workflow**
 ==========================
 
 **Branch Strategy**
@@ -171,7 +171,7 @@ Use clear, descriptive commit messages following this format:
 
    Update: Enhance Streamlit UI responsiveness for mobile devices
 
-🧪 **Testing Guidelines**
+ **Testing Guidelines**
 =========================
 
 **Testing Philosophy**
@@ -287,7 +287,7 @@ We maintain high code quality through comprehensive testing:
    # Run tests in parallel
    pytest -n auto
 
-📝 **Code Style and Standards**
+ **Code Style and Standards**
 ==============================
 
 **Python Style Guidelines**
@@ -399,7 +399,7 @@ We use automated code formatting tools:
            Any important notes or warnings
        """
 
-🐛 **Reporting Issues**
+ **Reporting Issues**
 ======================
 
 **Before Reporting**
@@ -466,7 +466,7 @@ When reporting bugs, please use this template:
    **Implementation Notes**
    Any technical considerations or constraints.
 
-🔄 **Pull Request Process**
+ **Pull Request Process**
 ==========================
 
 **Before Submitting**
@@ -571,7 +571,7 @@ We value all contributions and recognize contributors through:
 - **Community Spotlight**: Featured in project updates
 - **Commit Attribution**: Proper attribution in git history
 
-🎯 **Specific Contribution Areas**
+ **Specific Contribution Areas**
 ==================================
 
 **Manufacturing Domain Expertise**
@@ -604,7 +604,7 @@ Technical improvements needed:
 - **Testing**: Expand test coverage and automation
 - **Infrastructure**: Enhance deployment and monitoring capabilities
 
-📚 **Learning Resources**
+ **Learning Resources**
 ========================
 
 **Project-Specific Resources**
@@ -633,7 +633,7 @@ Technical improvements needed:
 - Streamlit documentation and tutorials
 - Git workflow and collaboration techniques
 
-🏆 **Contributor Recognition**
+ **Contributor Recognition**
 =============================
 
 **Contribution Levels**

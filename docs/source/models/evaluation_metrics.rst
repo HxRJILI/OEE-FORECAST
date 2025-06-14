@@ -3,7 +3,7 @@ Model Evaluation Metrics
 
 This section provides comprehensive documentation of the evaluation methodologies and metrics used to assess forecasting model performance in the OEE analytics system. Understanding these metrics is crucial for selecting appropriate models and interpreting prediction quality.
 
-📊 **Evaluation Framework**
+ **Evaluation Framework**
 ===========================
 
 **Multi-Dimensional Assessment:**
@@ -42,7 +42,7 @@ Our evaluation approach prioritizes:
 - **Practical Applicability**: Real-world deployment considerations
 - **Statistical Rigor**: Proper validation to prevent overfitting
 
-🎯 **Core Accuracy Metrics**
+ **Core Accuracy Metrics**
 ============================
 
 **1. Mean Absolute Error (MAE)**
@@ -230,7 +230,7 @@ MAPE provides intuitive percentage-based error measurement:
 - **Bounded**: Limited to 0-200% range
 - **Robust**: Less sensitive to very small actual values
 
-🔄 **Validation Strategies**
+ **Validation Strategies**
 ===========================
 
 **1. Walk-Forward Validation**
@@ -312,7 +312,7 @@ MAPE provides intuitive percentage-based error measurement:
        
        return fold_results
 
-📈 **Business Impact Metrics**
+ **Business Impact Metrics**
 =============================
 
 **1. Forecast Bias Analysis**
@@ -409,7 +409,7 @@ Directional accuracy is often more important than absolute accuracy for:
            'well_calibrated': abs(coverage - expected_coverage) < 5
        }
 
-🏆 **Model Comparison Framework**
+ **Model Comparison Framework**
 ===============================
 
 **1. Statistical Significance Testing**
@@ -484,14 +484,14 @@ Directional accuracy is often more important than absolute accuracy for:
        
        return rankings
 
-📊 **Comprehensive Performance Report**
+ **Comprehensive Performance Report**
 =====================================
 
 **Model Performance Summary:**
 
 .. code-block::
 
-   🏆 CHAMPION MODELS BY PRODUCTION LINE:
+    CHAMPION MODELS BY PRODUCTION LINE:
    
    LINE-01 (Most Challenging):
    ├── Champion: WaveNet-Style CNN
@@ -578,7 +578,7 @@ Directional accuracy is often more important than absolute accuracy for:
        
        return analysis
 
-🎯 **Production Deployment Metrics**
+ **Production Deployment Metrics**
 ===================================
 
 **Real-Time Performance Monitoring:**

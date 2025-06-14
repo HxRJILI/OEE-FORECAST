@@ -3,7 +3,7 @@ Forecasting API Reference
 
 This section provides comprehensive documentation for the forecasting components of the OEE analytics system. These APIs handle both statistical and deep learning-based time series forecasting capabilities.
 
-🔮 **Core Forecasting Classes**
+ **Core Forecasting Classes**
 ===============================
 
 .. py:class:: OEEForecaster
@@ -184,7 +184,7 @@ This section provides comprehensive documentation for the forecasting components
          
          scenario_forecasts = forecaster.predict_with_scenarios(scenarios, steps=14)
 
-📊 **Statistical Forecasting Models**
+ **Statistical Forecasting Models**
 ====================================
 
 .. py:class:: ARIMAForecaster
@@ -262,7 +262,7 @@ This section provides comprehensive documentation for the forecasting components
              
              return diagnostics
 
-🧠 **Deep Learning Forecasting Models**
+ **Deep Learning Forecasting Models**
 ======================================
 
 .. py:class:: DeepLearningForecaster
@@ -341,7 +341,7 @@ This section provides comprehensive documentation for the forecasting components
              
              return model
 
-⚡ **Performance Optimization**
+ **Performance Optimization**
 =============================
 
 .. py:function:: optimize_model_performance(model, data, optimization_config)
@@ -389,7 +389,7 @@ This section provides comprehensive documentation for the forecasting components
           
           return optimized_model, optimization_results
 
-📈 **Model Evaluation and Validation**
+ **Model Evaluation and Validation**
 =====================================
 
 .. py:function:: evaluate_forecast_performance(y_true, y_pred, metrics=['mae', 'rmse', 'mape'])
@@ -509,7 +509,7 @@ This section provides comprehensive documentation for the forecasting components
               'validation_summary': create_validation_summary(validation_results)
           }
 
-🎯 **Specialized Forecasting Functions**
+ **Specialized Forecasting Functions**
 =======================================
 
 .. py:function:: forecast_production_line_oee(line_data, production_line, forecast_days=7)
@@ -590,7 +590,7 @@ This section provides comprehensive documentation for the forecasting components
       'capacity':   Production capacity-weighted average
       'historical': Historical contribution-based weighting
 
-🔧 **Real-Time Forecasting**
+ **Real-Time Forecasting**
 ===========================
 
 .. py:class:: RealTimeForecaster
@@ -649,7 +649,7 @@ This section provides comprehensive documentation for the forecasting components
              
              return updated_forecasts
 
-🔄 **Model Management**
+ **Model Management**
 ======================
 
 .. py:function:: save_forecast_model(model, model_metadata, save_path)
@@ -717,7 +717,7 @@ This section provides comprehensive documentation for the forecasting components
    :returns: Loaded model and metadata
    :rtype: tuple
 
-📊 **Usage Examples**
+ **Usage Examples**
 ====================
 
 **Basic Forecasting**
@@ -796,7 +796,7 @@ This section provides comprehensive documentation for the forecasting components
    
    print(f"Best performing model: {best_model}")
 
-🚨 **Error Handling and Diagnostics**
+ **Error Handling and Diagnostics**
 ====================================
 
 **Common Exceptions**

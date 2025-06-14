@@ -3,7 +3,7 @@ Deep Learning Models for OEE Forecasting
 
 This section documents the advanced deep learning architectures implemented in OEE_Insights_3 for sophisticated time series forecasting. These models leverage neural networks to capture complex patterns and non-linear relationships in manufacturing data.
 
-🧠 **Architecture Overview**
+ **Architecture Overview**
 ============================
 
 **Model Portfolio:**
@@ -41,7 +41,7 @@ This section documents the advanced deep learning architectures implemented in O
 - **Validation**: Walk-forward validation with multiple horizons
 - **Hardware**: CPU/GPU compatibility with automatic detection
 
-🎯 **Model Architectures in Detail**
+ **Model Architectures in Detail**
 ===================================
 
 **1. Stacked RNN with Masking**
@@ -290,7 +290,7 @@ This section documents the advanced deep learning architectures implemented in O
 - **Sequential Processing**: Natural fit for time series data
 - **Forget Gates**: Selective memory retention for relevant patterns
 
-📊 **Comprehensive Performance Analysis**
+ **Comprehensive Performance Analysis**
 ========================================
 
 **Model Comparison Matrix:**
@@ -368,7 +368,7 @@ This section documents the advanced deep learning architectures implemented in O
    - Slower training
    - Average MAE: 0.074
 
-🚀 **Training Optimization**
+ **Training Optimization**
 ===========================
 
 **Learning Rate Scheduling:**
@@ -437,7 +437,7 @@ This section documents the advanced deep learning architectures implemented in O
        
        return X_augmented, y_augmented
 
-🎯 **Model Selection Strategy**
+ **Model Selection Strategy**
 ==============================
 
 **Automated Model Recommendation:**
@@ -494,7 +494,7 @@ This section documents the advanced deep learning architectures implemented in O
    - Secondary: Any model performs well
    - Rationale: Stable patterns allow any architecture to succeed
 
-⚡ **Implementation Best Practices**
+ **Implementation Best Practices**
 ==================================
 
 **Memory Management:**
@@ -569,7 +569,7 @@ This section documents the advanced deep learning architectures implemented in O
        
        return predict_oee
 
-🔬 **Advanced Features**
+ **Advanced Features**
 =======================
 
 **Uncertainty Quantification:**
@@ -659,7 +659,7 @@ The deep learning models are seamlessly integrated into the Streamlit forecastin
 - Real-time training progress visualization
 - Performance metrics and confidence intervals
 
-🚀 **Future Enhancements**
+ **Future Enhancements**
 =========================
 
 **Planned Improvements:**

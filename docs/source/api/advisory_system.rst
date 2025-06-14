@@ -3,7 +3,7 @@ Advisory System API Reference
 
 This section provides comprehensive documentation for the AI-powered advisory system APIs. These components enable intelligent recommendations, knowledge base management, and context-aware manufacturing optimization advice.
 
-🤖 **Core Advisory Classes**
+ **Core Advisory Classes**
 ============================
 
 .. py:class:: OEEAdvisor
@@ -190,7 +190,7 @@ This section provides comprehensive documentation for the AI-powered advisory sy
                  }
              }
 
-📚 **Knowledge Base Management**
+ **Knowledge Base Management**
 ==============================
 
 .. py:class:: DocumentKnowledgeBase
@@ -288,7 +288,7 @@ This section provides comprehensive documentation for the AI-powered advisory sy
              
              return reranked_results[:top_k]
 
-🎯 **Context-Aware Advisory Functions**
+ **Context-Aware Advisory Functions**
 ======================================
 
 .. py:function:: generate_line_specific_advice(advisor, production_line, current_metrics, historical_data)
@@ -475,7 +475,7 @@ This section provides comprehensive documentation for the AI-powered advisory sy
           
           return structured_analysis
 
-🔧 **Advanced Advisory Features**
+ **Advanced Advisory Features**
 =================================
 
 .. py:class:: AdvisoryAnalytics
@@ -553,7 +553,7 @@ This section provides comprehensive documentation for the AI-powered advisory sy
               'system_performance': assess_updated_performance(advisor)
           }
 
-🛡️ **Safety and Validation**
+ **Safety and Validation**
 ============================
 
 .. py:function:: validate_advice_safety(advice_text, manufacturing_context)
@@ -605,7 +605,7 @@ This section provides comprehensive documentation for the AI-powered advisory sy
               'mitigation_suggestions': suggest_risk_mitigations(safety_checks)
           }
 
-📊 **Performance Monitoring**
+ **Performance Monitoring**
 ============================
 
 .. py:class:: AdvisoryPerformanceMonitor
@@ -639,7 +639,7 @@ This section provides comprehensive documentation for the AI-powered advisory sy
    :returns: Detailed performance report
    :rtype: dict
 
-🔗 **Integration Examples**
+ **Integration Examples**
 ==========================
 
 **Basic Advisory Usage**
@@ -744,7 +744,7 @@ This section provides comprehensive documentation for the AI-powered advisory sy
    print("Comparative Analysis Results:")
    print(comparative_analysis['analysis_summary'])
 
-🚨 **Error Handling**
+ **Error Handling**
 ====================
 
 **Advisory System Exceptions**

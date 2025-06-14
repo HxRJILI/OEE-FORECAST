@@ -3,7 +3,7 @@ Troubleshooting Guide
 
 This comprehensive troubleshooting guide helps diagnose and resolve common issues encountered when deploying and using the OEE Forecasting and Analytics system.
 
-🔍 **Common Issues and Solutions**
+ **Common Issues and Solutions**
 =================================
 
 **Installation and Setup Issues**
@@ -621,7 +621,7 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
        
        return all_predictions
 
-🔧 **Diagnostic Tools**
+ **Diagnostic Tools**
 ======================
 
 **System Health Check Script**
@@ -876,7 +876,7 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
            
            return recommendations
 
-🛠️ **Quick Fix Scripts**
+ **Quick Fix Scripts**
 ======================
 
 **Environment Reset Script**
@@ -965,7 +965,7 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
    if __name__ == "__main__":
        clear_all_caches()
 
-📞 **Getting Help**
+ **Getting Help**
 ==================
 
 **When to Seek Additional Help**
@@ -974,13 +974,13 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
 
    Escalation Guidelines:
    
-   🔍 Self-Diagnosis First:
+    Self-Diagnosis First:
    - Run the health check script
    - Check logs for error patterns
    - Try the quick fix scripts
    - Review this troubleshooting guide
    
-   📞 Contact Support When:
+    Contact Support When:
    - Data corruption or loss occurs
    - Security vulnerabilities are discovered
    - Performance degradation persists after optimization
@@ -993,19 +993,19 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
 
    Support Information Checklist:
    
-   ✅ System Information:
+    System Information:
    - Operating system and version
    - Python version
    - Package versions (pip freeze output)
    - Hardware specifications (RAM, CPU, GPU)
    
-   ✅ Error Information:
+    Error Information:
    - Complete error messages
    - Steps to reproduce the issue
    - Log files (sanitized)
    - Screenshots if applicable
    
-   ✅ Environment Details:
+    Environment Details:
    - Deployment method (local, Docker, cloud)
    - Data volume and characteristics
    - Custom modifications made
@@ -1015,14 +1015,14 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
 
 .. code-block::
 
-   🌐 Online Resources:
+    Online Resources:
    
    - GitHub Issues: https://github.com/HxRJILI/OEE-FORECAST/issues
    - Documentation: This comprehensive guide
    - Stack Overflow: Tag questions with 'oee-analytics'
    - Manufacturing Forums: Discuss domain-specific issues
    
-   📚 Documentation Sections:
+    Documentation Sections:
    
    - Installation Guide: Step-by-step setup instructions
    - API Reference: Detailed function documentation
@@ -1035,7 +1035,7 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
 
    # emergency_recovery.sh - Emergency system recovery
    
-   echo "🚨 Emergency Recovery Procedure"
+   echo " Emergency Recovery Procedure"
    
    # Backup current state
    timestamp=$(date +%Y%m%d_%H%M%S)
@@ -1048,10 +1048,10 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
    cp *.csv $backup_dir/ 2>/dev/null
    cp .env* $backup_dir/ 2>/dev/null
    
-   echo "✅ Emergency backup created in $backup_dir"
+   echo " Emergency backup created in $backup_dir"
    
    # Reset to known good state
-   echo "🔄 Resetting to clean state..."
+   echo " Resetting to clean state..."
    
    # Stop all running processes
    pkill -f streamlit
@@ -1063,7 +1063,7 @@ This comprehensive troubleshooting guide helps diagnose and resolve common issue
    # Reset environment
    ./reset_environment.sh
    
-   echo "🎉 Emergency recovery completed"
-   echo "📁 Backup available in: $backup_dir"
+   echo " Emergency recovery completed"
+   echo " Backup available in: $backup_dir"
 
 This troubleshooting guide covers the most common issues encountered with the OEE Forecasting and Analytics system. For additional help or to report new issues, please refer to the community resources or contact support with the information checklist provided.

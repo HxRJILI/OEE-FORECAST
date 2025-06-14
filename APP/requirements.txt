@@ -1,0 +1,28 @@
+# Core Streamlit and Data Processing (Your existing requirements)
+streamlit>=1.28.0
+pandas>=1.5.0
+numpy>=1.24.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Machine Learning (Your existing requirements)
+tensorflow>=2.10.0
+scikit-learn>=1.3.0
+
+# RAG Advisory System - NEW ADDITIONS
+google-generativeai>=0.3.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+PyPDF2>=3.0.0
+pdfplumber>=0.9.0
+spacy>=3.7.0
+nltk>=3.8.0
+
+# Additional utilities for RAG system
+python-dateutil>=2.8.0
+tqdm>=4.65.0
+
+# Optional: For enhanced performance (uncomment if needed)
+# transformers>=4.30.0
+# torch>=2.0.0

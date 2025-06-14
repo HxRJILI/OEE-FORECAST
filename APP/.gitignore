@@ -1,0 +1,12 @@
+
+
+# OEE Advisory System
+processed_documents/
+embeddings/
+document_metadata/
+vector_db/
+models/
+*.pkl
+*.faiss
+__pycache__/
+*.log

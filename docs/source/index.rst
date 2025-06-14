@@ -20,30 +20,30 @@ This project provides a complete solution for manufacturing performance analysis
 - **Interactive Dashboard**: Streamlit-based web application for real-time analytics
 - **AI Advisory System**: RAG-powered intelligent recommendations for OEE improvement
 
-🎯 **Key Features**
+ **Key Features**
 ==================
 
-📊 **Comprehensive Analytics**
+ **Comprehensive Analytics**
    - Real-time OEE calculation (Availability × Performance × Quality)
    - Multi-line production performance comparison
    - Historical trend analysis and pattern recognition
 
-🔮 **Advanced Forecasting**
+ **Advanced Forecasting**
    - Multiple deep learning architectures (RNN, CNN, WaveNet-style)
    - Multi-step ahead predictions with uncertainty quantification
    - Walk-forward validation for realistic performance assessment
 
-🤖 **AI-Powered Insights**
+ **AI-Powered Insights**
    - RAG-based advisory system for manufacturing optimization
    - Document-driven knowledge base for best practices
    - Intelligent recommendations based on performance patterns
 
-📈 **Production Dashboard**
+ **Production Dashboard**
    - Line-specific performance monitoring
    - Interactive visualizations with Plotly
    - Real-time alerts and status indicators
 
-🏗️ **Project Architecture**
+ **Project Architecture**
 ==========================
 
 The project is built around three core Jupyter notebooks that progressively build upon each other:
@@ -58,7 +58,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 - Advanced forecasting capabilities with multiple model options
 - AI-powered advisory system for optimization recommendations
 
-📚 **Table of Contents**
+ **Table of Contents**
 ========================
 
 .. toctree::
@@ -72,7 +72,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: 📊 User Guide
+   :caption:  User Guide
    :numbered:
 
    streamlit/overview
@@ -82,7 +82,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: 📓 Analysis Notebooks
+   :caption:  Analysis Notebooks
    :numbered:
 
    notebooks/oee_insights_1
@@ -91,7 +91,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 3
-   :caption: 🤖 Models & Algorithms
+   :caption:  Models & Algorithms
    :numbered:
 
    models/statistical_models
@@ -100,7 +100,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🔧 Developer Reference
+   :caption:  Developer Reference
    :numbered:
 
    api/data_processing
@@ -109,7 +109,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🚀 Advanced Topics
+   :caption:  Advanced Topics
    :numbered:
 
    advanced/rag_system
@@ -118,14 +118,14 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 1
-   :caption: 📋 Resources
+   :caption:  Resources
 
    troubleshooting
    changelog
    contributing
    license
 
-🚀 **Quick Start**
+ **Quick Start**
 ==================
 
 .. code-block:: bash
@@ -142,7 +142,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 For detailed installation instructions, see :doc:`installation`.
 
-📊 **Results Overview**
+ **Results Overview**
 =======================
 
 Our comprehensive analysis across multiple production lines demonstrates:
@@ -164,7 +164,7 @@ Our comprehensive analysis across multiple production lines demonstrates:
    - Best performing line: LINE-06 (Manufacturing optimization success)
    - Most challenging: LINE-01 (High variability, requires advanced models)
 
-🤝 **Contributing**
+ **Contributing**
 ==================
 
 We welcome contributions! Please see our :doc:`contributing` guide for details on:
@@ -174,12 +174,12 @@ We welcome contributions! Please see our :doc:`contributing` guide for details o
 - Documentation updates
 - Feature requests and bug reports
 
-📄 **License**
+ **License**
 =============
 
 This project is licensed under the MIT License - see the :doc:`license` file for details.
 
-🔗 **Links**
+ **Links**
 ============
 
 - **GitHub Repository**: `https://github.com/HxRJILI/OEE-FORECAST <https://github.com/HxRJILI/OEE-FORECAST>`_

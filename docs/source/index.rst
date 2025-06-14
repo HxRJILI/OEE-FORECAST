@@ -63,7 +63,8 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Getting Started
+   :caption: 🚀 Getting Started
+   :numbered:
 
    installation
    quickstart
@@ -71,15 +72,8 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Data Processing & Analysis
-
-   notebooks/oee_insights_1
-   notebooks/oee_insights_2
-   notebooks/oee_insights_3
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Streamlit Application
+   :caption: 📊 User Guide
+   :numbered:
 
    streamlit/overview
    streamlit/dashboard
@@ -88,7 +82,17 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Model Documentation
+   :caption: 📓 Analysis Notebooks
+   :numbered:
+
+   notebooks/oee_insights_1
+   notebooks/oee_insights_2
+   notebooks/oee_insights_3
+
+.. toctree::
+   :maxdepth: 3
+   :caption: 🤖 Models & Algorithms
+   :numbered:
 
    models/statistical_models
    models/deep_learning_models
@@ -96,7 +100,8 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: API Reference
+   :caption: 🔧 Developer Reference
+   :numbered:
 
    api/data_processing
    api/forecasting
@@ -104,7 +109,8 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Advanced Features
+   :caption: 🚀 Advanced Topics
+   :numbered:
 
    advanced/rag_system
    advanced/model_optimization
@@ -112,7 +118,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Additional Resources
+   :caption: 📋 Resources
 
    troubleshooting
    changelog

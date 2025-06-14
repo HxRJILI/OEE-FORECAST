@@ -63,7 +63,7 @@ These notebooks feed into a comprehensive Streamlit application that provides:
 
 .. toctree::
    :maxdepth: 2
-   :caption: 🚀 Getting Started
+   :caption:  Getting Started
    :numbered:
 
    installation

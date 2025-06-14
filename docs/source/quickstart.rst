@@ -5,6 +5,8 @@ OEE Insights 1: Data Processing and OEE Calculation
    **Notebook**: ``OEE_Insights_1.ipynb``
    
    **Authors**: Wiame El Hafid & Houssam Rjili
+
+   **Supervisor**: Mr. Tawfik Masrour
    
    **Purpose**: Foundation notebook for data preprocessing and OEE metric calculation
 
